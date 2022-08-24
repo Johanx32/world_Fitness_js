@@ -31,8 +31,8 @@ Route::get('/', function () {
     return view('paginaPrincipal');
 });
 
-Route::get('/login',[LoginController::class,'show']);
-Route::post('/login',[LoginController::class,'login']);
+Route::get('/login',[LoginController::class,'show'])->name('login.login');
+Route::post('/login',[LoginController::class,'login'])->name('login');
 
 Route::get('usuario/registrar', [UsuarioController::class, 'create'])->name('usuario.create');
 Route::get('usuario/index', [UsuarioController::class, 'index'])->name('usuario.index');
@@ -45,7 +45,7 @@ Route::get('gerente',[Gerente::class,'index'])->name('gerente.indexadmin');
 Route::get('cliente',[Cliente::class,'index'])->name('Cliente.indexcliente1');
 Route::get('entrenador',[Entrenador::class,'index'])->name('entrenador.indexentrenador');
 
-Route::get('mantenimiento/registrar', [MantenimientoController::class, 'create'])->name('mantenimiento.crear');
+Route::get('mantenimiento/registrar', [MantenimientoController::class, 'create'])->name('mantenimiento.create');
 Route::get('mantenimiento/index', [MantenimientoController::class, 'index'])->name('mantenimiento.index');
 Route::post('mantenimiento/guardar', [MantenimientoController::class, 'store'])->name('mantenimiento.store');
 Route::get('mantenimiento/{mantenimiento}/editar', [MantenimientoController::class, 'edit'])->name('mantenimiento.edit');
@@ -59,42 +59,49 @@ Route::get('valoracion_fisica/{valoracion_fisica}/editar', [ValoracionFisicaCont
 Route::put('valoracion_fisica/{valoracion_fisica}/actualizar', [ValoracionFisicaController::class, 'update'])->name('valoracion_fisica.update');
 Route::delete('valoracion_fisica/{valoracion_fisica}/eliminar', [ValoracionFisicaController::class, 'destroy'])->name('valoracion_fisica.destroy');
 
-Route::get('ejercicio/registrar', [EjercicioController::class, 'create'])->name('ejercicio.crear');
+Route::get('ejercicio/registrar', [EjercicioController::class, 'create'])->name('ejercicio.create');
 Route::get('ejercicio/index', [EjercicioController::class, 'index'])->name('ejercicio.index');
 Route::post('ejercicio/guardar', [EjercicioController::class, 'store'])->name('ejercicio.store');
 Route::get('ejercicio/{ejercicio}/editar', [EjercicioController::class, 'edit'])->name('ejercicio.edit');
 Route::put('ejercicio/{ejercicio}/actualizar', [EjercicioController::class, 'update'])->name('ejercicio.update');
 Route::delete('ejercicio/{ejercicio}/eliminar', [EjercicioController::class, 'destroy'])->name('ejercicio.destroy');
 
-Route::get('gerente/registrar', [GerenteController::class, 'create'])->name('gerente.crear');
+Route::get('gerente/registrar', [GerenteController::class, 'create'])->name('gerente.create');
 Route::get('gerente/index', [GerenteController::class, 'index'])->name('gerente.index');
 Route::post('gerente/guardar', [GerenteController::class, 'store'])->name('gerente.store');
 Route::get('gerente/{gerente}/editar', [GerenteController::class, 'edit'])->name('gerente.edit');
 Route::put('gerente/{gerente}/actualizar', [GerenteController::class, 'update'])->name('gerente.update');
 Route::delete('gerente/{gerente}/eliminar', [GerenteController::class, 'destroy'])->name('gerente.destroy');
 
-Route::get('cliente/registrar', [ClienteController::class, 'create'])->name('cliente.crear');
+Route::get('cliente/registrar', [ClienteController::class, 'create'])->name('cliente.create');
 Route::get('cliente/index', [ClienteController::class, 'index'])->name('cliente.index');
 Route::post('cliente/guardar', [ClienteController::class, 'store'])->name('cliente.store');
 Route::get('cliente/{cliente}/editar', [ClienteController::class, 'edit'])->name('cliente.edit');
 Route::put('cliente/{cliente}/actualizar', [ClienteController::class, 'update'])->name('cliente.update');
 Route::delete('cliente/{cliente}/eliminar', [ClienteController::class, 'destroy'])->name('cliente.destroy');
 
-Route::get('maquina/registrar', [MaquinaController::class, 'create'])->name('maquina.crear');
+Route::get('entrenador/registrar', [EntrenadorController::class, 'create'])->name('entrenador.create');
+Route::get('entrenador/index', [EntrenadorController::class, 'index'])->name('entrenador.index');
+Route::post('entrenador/guardar', [EntrenadorController::class, 'store'])->name('entrenador.store');
+Route::get('entrenador/{entrenador}/editar', [EntrenadorController::class, 'edit'])->name('entrenador.edit');
+Route::put('entrenador/{entrenador}/actualizar', [EntrenadorController::class, 'update'])->name('entrenador.update');
+Route::delete('entrenador/{entrenador}/eliminar', [EntrenadorController::class, 'destroy'])->name('entrenador.destroy');
+
+Route::get('maquina/registrar', [MaquinaController::class, 'create'])->name('maquina.create');
 Route::get('maquina/index', [MaquinaController::class, 'index'])->name('maquina.index');
 Route::post('maquina/guardar', [MaquinaController::class, 'store'])->name('maquina.store');
 Route::get('maquina/{maquina}/editar', [MaquinaController::class, 'edit'])->name('maquina.edit');
 Route::put('maquina/{maquina}/actualizar', [MaquinaController::class, 'update'])->name('maquina.update');
 Route::delete('maquina/{maquina}/eliminar', [MaquinaController::class, 'destroy'])->name('maquina.destroy');
 
-Route::get('reporte/registrar', [ReporteController::class, 'create'])->name('reporte.crear');
+Route::get('reporte/registrar', [ReporteController::class, 'create'])->name('reporte.create');
 Route::get('reporte/index', [ReporteController::class, 'index'])->name('reporte.index');
 Route::post('reporte/guardar', [ReporteController::class, 'store'])->name('reporte.store');
 Route::get('reporte/{reporte}/editar', [ReporteController::class, 'edit'])->name('reporte.edit');
 Route::put('reporte/{reporte}/actualizar', [ReporteController::class, 'update'])->name('reporte.update');
 Route::delete('reporte/{reporte}/eliminar', [ReporteController::class, 'destroy'])->name('reporte.destroy');
 
-Route::get('rutina/registrar', [RutinaController::class, 'create'])->name('rutina.crear');
+Route::get('rutina/registrar', [RutinaController::class, 'create'])->name('rutina.create');
 Route::get('rutina/index', [RutinaController::class, 'index'])->name('rutina.index');
 Route::post('rutina/guardar', [RutinaController::class, 'store'])->name('rutina.store');
 Route::get('rutina/{rutina}/editar', [RutinaController::class, 'edit'])->name('rutina.edit');

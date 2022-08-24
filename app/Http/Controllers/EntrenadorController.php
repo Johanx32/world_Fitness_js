@@ -10,13 +10,13 @@ class EntrenadorController extends Controller
 
     public function index()
     {
-        $entrenador = Entrenador::orderByDesc('id')->get();
+        $entrenador = Entrenador::get();
         return view('auth.entrenador.index', compact('entrenador'));
     }
 
     public function create()
     {
-        return view('auth.entrenador.crear');
+        return view('auth.entrenador.create');
     }
 
     public function store(Request $request)
@@ -26,7 +26,7 @@ class EntrenadorController extends Controller
                 'nombre_Entre' => ' required| max:50',
                 'apellido_Entre' => 'required| max:50',
                 'fecha_Nac_Entre' => 'required',
-                'telefono_Entre' => 'required',
+                'telefono_Entre' => 'required| max:11',
                 'direccion_Entre' => 'required| max:50',
                 'estado_Entre' => 'required',
                 'identificacion_Usuario_FK' => 'required'
@@ -34,7 +34,7 @@ class EntrenadorController extends Controller
         );
 
         $entrenador = Entrenador::create($datos);
-        return redirect()->route('auth.entrenador.index');
+        return redirect()->route('entrenador.index');
     }
 
     public function show(Entrenador $entrenador)
@@ -62,12 +62,12 @@ class EntrenadorController extends Controller
         );
 
             $entrenador->update($datos);
-            return redirect()->route('auth.entrenador.index');
+            return redirect()->route('entrenador.index');
     }
 
     public function destroy(Entrenador $entrenador)
     {
         $entrenador->delete();
-        return redirect()->route('auth.entrenador.index');
+        return redirect()->route('entrenador.index');
     }
 }

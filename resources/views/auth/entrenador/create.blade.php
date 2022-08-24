@@ -7,6 +7,7 @@
     <div class="col-sm-12">
                 <a href="{{ route('entrenador.create') }}" class="btn btn-link">Crear Entrenador</a>
                 <a href="{{ route('entrenador.index') }}" class="btn btn-link">Listar Entrenador</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
                 <a href="" class="btn btn-link">Volver</a>
             </div>
     <form action="{{ route('entrenador.store') }}" method="POST">
@@ -51,6 +52,7 @@
                 <label for="identificacion_Usuario_FK" class="form-label">Id Usuario</label><br>
                 <input type="text" name="identificacion_Usuario_FK" class="form-control" id="identificacion_Usuario_FK"><br><br>
             </div>
+            
             <div class="col-sm-12 text-end my-2">
                 <button type="submit" class="btn btn-primary">
                     Guardar

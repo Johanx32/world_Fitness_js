@@ -4,7 +4,11 @@
 
 @section('contenido')
     <h3>Nuevo Mantenimiento</h3>
-
+    <div class="col-sm-12">
+                <a href="{{ route('valoracion_fisica.create') }}" class="btn btn-link">Crear valoracion fisica</a>
+                <a href="{{ route('valoracion_fisica.index') }}" class="btn btn-link">Listar valoracion fisicas</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+            </div>
     <form action="{{ route('valoracion_fisica.store') }}" method="POST">
         @csrf
         <div class="row">

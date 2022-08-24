@@ -4,6 +4,11 @@
 
 @section('contenido')
     <h3>Listado de Mantenimientos</h3>
+    <div class="col-sm-12">
+                <a href="{{ route('mantenimiento.create') }}" class="btn btn-link">Crear mantenimiento</a>
+                <a href="{{ route('mantenimiento.index') }}" class="btn btn-link">Listar mantenimientos</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+            </div>
     <table class="table table-stripped table-hover">
         <thead>
             <tr>

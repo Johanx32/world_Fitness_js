@@ -8,7 +8,7 @@
     <div class="col-sm-12">
     <a href="{{ route('usuario.create') }}" class="btn btn-link">Crear Usuario</a>
     <a href="{{ route('usuario.index') }}" class="btn btn-link">Listar Usuarios</a>
-    <a href="" class="btn btn-link">Volver</a>
+    <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
     </div>
     <table class="table table-stripped table-hover">
         <thead>

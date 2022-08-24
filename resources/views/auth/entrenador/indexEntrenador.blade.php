@@ -92,7 +92,7 @@
         <div class="profile_name">Santiago duarte</div>
         <div class="job">Administrador</div>
       </div>
-      <i class='bx bx-log-out' ></i>
+      <a href="{{ route('login.login') }}"><i class='bx bx-log-out'></i></a>
     </div>
   </li>
 </ul>

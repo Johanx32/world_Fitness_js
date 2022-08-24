@@ -31,7 +31,6 @@
             @csrf
                 <input class="input" type="text" placeholder="Usuario" name="user">
                 <input class="input" type="password" placeholder="Contraseña" name="password">
-                <p>¿olvidaste tu contraseña? <span class="span">Click aqui</span></p>
                 <button class="btn">Iniciar sesion</button>
             </form>
           </div>

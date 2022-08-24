@@ -4,7 +4,11 @@
 
 @section('contenido')
     <h3>Nuevo Mantenimiento</h3>
-
+    <div class="col-sm-12">
+                <a href="{{ route('mantenimiento.create') }}" class="btn btn-link">Crear mantenimiento</a>
+                <a href="{{ route('mantenimiento.index') }}" class="btn btn-link">Listar mantenimientos</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+            </div>
     <form action="{{ route('mantenimiento.store') }}" method="POST">
         @csrf
         <div class="row">

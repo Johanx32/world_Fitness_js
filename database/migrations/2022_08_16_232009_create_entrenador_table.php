@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nombre_Entre');
             $table->string('apellido_Entre');
             $table->date('fecha_Nac_Entre');
-            $table->integer('telefono_Entre');
+            $table->string('telefono_Entre');
             $table->string('direccion_Entre');
             $table->boolean('estado_Entre');
             $table->integer('identificacion_Usuario_FK');

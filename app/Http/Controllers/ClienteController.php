@@ -14,7 +14,7 @@ class ClienteController extends Controller
 
     public function create()
     {
-        return view('auth.cliente.crear');
+        return view('auth.cliente.create');
     }
 
     public function store(Request $request)
@@ -24,7 +24,7 @@ class ClienteController extends Controller
                 'nombre_Clie' => ' required| max:50',
                 'apellido_Clie' => 'required| max:50',
                 'fecha_Nac_Clie' => 'required',
-                'telefono_Clie' => 'required',
+                'telefono_Clie' => 'required| max:11',
                 'direccion_Clie' => 'required| max:50',
                 'estado_Clie' => 'required',
                 'identificacion_Usuario_FK' => 'required'
@@ -32,7 +32,7 @@ class ClienteController extends Controller
         );
 
         $cliente = Cliente::create($datos);
-        return redirect()->route('auth.cliente.index');
+        return redirect()->route('cliente.index');
     }
 
     public function show(Cliente $cliente)
@@ -60,12 +60,12 @@ class ClienteController extends Controller
         );
 
             $cliente->update($datos);
-            return redirect()->route('auth.cliente.index');
+            return redirect()->route('cliente.index');
     }
 
     public function destroy(Cliente $cliente)
     {
         $cliente->delete();
-        return redirect()->route('auth.cliente.index');
+        return redirect()->route('cliente.index');
     }
 }

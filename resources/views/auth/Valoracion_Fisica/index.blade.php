@@ -1,14 +1,15 @@
 @extends('auth.tema.app')
 
-@section('title', "Listado de Usuarios")
+@section('title', "Listado de Valoracion Fisica")
 
 @section('contenido')
-    <h3>Listado de Usuarios</h3>
-    
+    <h3>Listado de Valoracion Fisica</h3>
     <div class="col-sm-12">
-        <a href="{{ route('valoracion_fisica.create') }}" class="btn btn-link">Crear Tarea</a>
-        <a href="{{ route('valoracion_fisica.index') }}" class="btn btn-link">Listar Tareas</a>
-    </div>
+                <a href="{{ route('valoracion_fisica.create') }}" class="btn btn-link">Crear valoracion fisica</a>
+                <a href="{{ route('valoracion_fisica.index') }}" class="btn btn-link">Listar valoracion fisicas</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+            </div>
+
     <table class="table table-stripped table-hover">
         <thead>
             <tr>

@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('nombre_Clie');
             $table->string('apellido_Clie');
             $table->date('fecha_Nac_Clie');
-            $table->integer('telefono_Clie');
+            $table->string('telefono_Clie');
             $table->string('direccion_Clie');
             $table->boolean('estado_Clie');
             $table->integer('identificacion_Usuario_FK');

@@ -16,7 +16,7 @@ class MantenimientoController extends Controller
 
     public function create()
     {
-        return view('mantenimiento.crear');
+        return view('auth.mantenimiento.crear');
     }
 
     public function store(Request $request)
@@ -42,7 +42,7 @@ class MantenimientoController extends Controller
 
     public function edit(Mantenimiento $mantenimiento)
     {
-        return view('mantenimiento.edit', compact('mantenimiento'));
+        return view('auth.mantenimiento.edit', compact('mantenimiento'));
     }
 
     public function update(Request $request, Mantenimiento $mantenimiento)
