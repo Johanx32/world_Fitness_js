@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('ejercicio', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre_Ejercicio');
+            $table->time('tiempo_Ejercicio');
+            $table->integer('series_Ejercicio');
+            $table->string('musculos_Involucrados');
+            $table->string('ejemplo_Ejercicio');
+            $table->boolean('estado_Ejercicio');
             $table->timestamps();
         });
     }

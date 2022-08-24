@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ assets(../../css/indexAdmin.css) }}">
+    <link rel="stylesheet" href="{{ asset('css/indexAdmin.css') }}">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -147,104 +147,8 @@
   </div>
 
     <div class="row my-5 table">
-      <h3 class="fs-4 mb-3 table-title">Clientes recientes</h3>
-      <div class="col">
-          <table class="table bg-white rounded shadow-sm  table-hover">
-              <thead>
-                  <tr>
-                      <th scope="col" width="50">#</th>
-                      <th scope="col">Nombres</th>
-                      <th scope="col">Apellidos</th>
-                      <th scope="col">Telefono</th>
-                      <th scope="col">Edad</th>
-                      <th scope="col">Fecha inicio</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Yohan santiago</td>
-                      <td>Duarte martinez</td>
-                      <td>3127887641</td>
-                      <td>22</td>
-                      <td>09/08/2022</td>
-                  </tr>
-                  
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Yohan santiago</td>
-                      <td>Duarte martinez</td>
-                      <td>3127887641</td>
-                      <td>22</td>
-                      <td>09/08/2022</td>
-                  </tr>
-
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Yohan santiago</td>
-                      <td>Duarte martinez</td>
-                      <td>3127887641</td>
-                      <td>22</td>
-                      <td>09/08/2022</td>
-                  </tr>
-
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Yohan santiago</td>
-                      <td>Duarte martinez</td>
-                      <td>3127887641</td>
-                      <td>22</td>
-                      <td>09/08/2022</td>
-                  </tr>
-
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Yohan santiago</td>
-                      <td>Duarte martinez</td>
-                      <td>3127887641</td>
-                      <td>22</td>
-                      <td>09/08/2022</td>
-                  </tr>
-
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Yohan santiago</td>
-                      <td>Duarte martinez</td>
-                      <td>3127887641</td>
-                      <td>22</td>
-                      <td>09/08/2022</td>
-                  </tr>
-
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Yohan santiago</td>
-                      <td>Duarte martinez</td>
-                      <td>3127887641</td>
-                      <td>22</td>
-                      <td>09/08/2022</td>
-                  </tr>
-
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Yohan santiago</td>
-                      <td>Duarte martinez</td>
-                      <td>3127887641</td>
-                      <td>22</td>
-                      <td>09/08/2022</td>
-                  </tr>
-
-                  <tr>
-                      <th scope="row">1</th>
-                      <td>Yohan santiago</td>
-                      <td>Duarte martinez</td>
-                      <td>3127887641</td>
-                      <td>22</td>
-                      <td>09/08/2022</td>
-                  </tr>
-              </tbody>
-          </table>
-      </div>
-  </div>
+      @yield('contenido') 
+    </div>
   </section>
 
   

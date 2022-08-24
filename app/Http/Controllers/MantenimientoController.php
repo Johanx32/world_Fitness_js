@@ -11,7 +11,7 @@ class MantenimientoController extends Controller
     public function index()
     {
         $mantenimiento = Mantenimiento::orderByDesc('id')->get();
-        return view('mantenimiento.index', compact('mantenimiento'));
+        return view('auth.mantenimiento.index', compact('mantenimiento'));
     }
 
     public function create()

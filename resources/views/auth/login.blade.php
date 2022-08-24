@@ -16,15 +16,15 @@
             <div class="social-login">
                 <div class="social-login-element">
                    <img src="{{ asset('img/entrenador.png') }}">
-                   <a href="/entrenador/index" class="boton">Entrenador</a>
+                   <a href="entrenador" class="boton">Entrenador</a>
                 </div>
                 <div class="social-login-element">
                     <img src="{{ asset('img/aerobicos.png') }}">
-                    <a href="/cliente/index" class="boton">Cliente</a>
+                    <a href="cliente" class="boton">Cliente</a>
                 </div>
                 <div class="social-login-element">
                     <img src="{{ asset('img/aerobicos.png') }}">
-                    <a href="/gerente/index" class="boton">Gerente</a>
+                    <a href="gerente" class="boton">Gerente</a>
                 </div>
             </div>
             <form class="inputs-container" action="/login" method="POST">

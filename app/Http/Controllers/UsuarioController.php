@@ -11,12 +11,12 @@ class UsuarioController extends Controller
     public function index()
     {
         $usuario = Usuario::get();
-        return view('usuario.index', compact('usuario'));
+        return view('auth.usuario.index', compact('usuario'));
     }
 
     public function create()
     {
-        return view('usuario.create');
+        return view('auth.usuario.create');
     }
 
     public function store(Request $request)
@@ -39,7 +39,7 @@ class UsuarioController extends Controller
 
     public function edit(Usuario $usuario)
     {
-        return view('usuario.edit', compact('usuario'));
+        return view('auth.usuario.edit', compact('usuario'));
     }
 
     public function update(Request $request, Usuario $usuario)

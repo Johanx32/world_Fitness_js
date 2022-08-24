@@ -11,12 +11,12 @@ class ValoracionFisicaController extends Controller
     public function index()
     {
         $valoracion_fisica = ValoracionFisica::get();
-        return view('valoracion_fisica.index', compact('valoracion_fisica'));
+        return view('auth.valoracion_fisica.index', compact('valoracion_fisica'));
     }
 
     public function create()
     {
-        return view('valoracion_fisica.create');
+        return view('auth.valoracion_fisica.create');
     }
 
     public function store(Request $request)

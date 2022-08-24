@@ -8,6 +8,11 @@ use App\Http\Controllers\GerenteController;
 use App\Http\Controllers\MantenimientoController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\EjercicioController;
+use App\Http\Controllers\EntrenadorController;
+use App\Http\Controllers\MaquinaController;
+use App\Http\Controllers\ReporteController;
+use App\Http\Controllers\RutinaController;
 use App\Http\Controllers\ValoracionFisicaController;
 use Illuminate\Support\Facades\Route;
 
@@ -36,9 +41,9 @@ Route::get('usuario/{usuario}/editar', [UsuarioController::class, 'edit'])->name
 Route::put('usuario/{usuario}/actualizar', [UsuarioController::class, 'update'])->name('usuario.update');
 Route::delete('usuario/{usuario}/eliminar', [UsuarioController::class, 'destroy'])->name('usuario.destroy');
 
-Route::get('/gerente/index',[Gerente::class,'index'])->name('gerente.indexAdmin');
-Route::get('/cliente/index',[Cliente::class,'index'])->name('cliente.indexCliente');
-Route::get('/entrenador/index',[Entrenador::class,'index'])->name('entrenador.indexentrenador');
+Route::get('gerente',[Gerente::class,'index'])->name('gerente.indexadmin');
+Route::get('cliente',[Cliente::class,'index'])->name('Cliente.indexcliente1');
+Route::get('entrenador',[Entrenador::class,'index'])->name('entrenador.indexentrenador');
 
 Route::get('mantenimiento/registrar', [MantenimientoController::class, 'create'])->name('mantenimiento.crear');
 Route::get('mantenimiento/index', [MantenimientoController::class, 'index'])->name('mantenimiento.index');
@@ -47,10 +52,52 @@ Route::get('mantenimiento/{mantenimiento}/editar', [MantenimientoController::cla
 Route::put('mantenimiento/{mantenimiento}/actualizar', [MantenimientoController::class, 'update'])->name('mantenimiento.update');
 Route::delete('mantenimiento/{mantenimiento}/eliminar', [MantenimientoController::class, 'destroy'])->name('mantenimiento.destroy');
 
-
 Route::get('valoracion_fisica/registrar',[ValoracionFisicaController::class, 'create'])->name('valoracion_fisica.create');
 Route::get('valoracion_fisica/index', [ValoracionFisicaController::class, 'index'])->name('valoracion_fisica.index');
 Route::post('valoracion_fisica/guardar', [ValoracionFisicaController::class, 'store'])->name('valoracion_fisica.store');
 Route::get('valoracion_fisica/{valoracion_fisica}/editar', [ValoracionFisicaController::class, 'edit'])->name('valoracion_fisica.edit');
 Route::put('valoracion_fisica/{valoracion_fisica}/actualizar', [ValoracionFisicaController::class, 'update'])->name('valoracion_fisica.update');
 Route::delete('valoracion_fisica/{valoracion_fisica}/eliminar', [ValoracionFisicaController::class, 'destroy'])->name('valoracion_fisica.destroy');
+
+Route::get('ejercicio/registrar', [EjercicioController::class, 'create'])->name('ejercicio.crear');
+Route::get('ejercicio/index', [EjercicioController::class, 'index'])->name('ejercicio.index');
+Route::post('ejercicio/guardar', [EjercicioController::class, 'store'])->name('ejercicio.store');
+Route::get('ejercicio/{ejercicio}/editar', [EjercicioController::class, 'edit'])->name('ejercicio.edit');
+Route::put('ejercicio/{ejercicio}/actualizar', [EjercicioController::class, 'update'])->name('ejercicio.update');
+Route::delete('ejercicio/{ejercicio}/eliminar', [EjercicioController::class, 'destroy'])->name('ejercicio.destroy');
+
+Route::get('gerente/registrar', [GerenteController::class, 'create'])->name('gerente.crear');
+Route::get('gerente/index', [GerenteController::class, 'index'])->name('gerente.index');
+Route::post('gerente/guardar', [GerenteController::class, 'store'])->name('gerente.store');
+Route::get('gerente/{gerente}/editar', [GerenteController::class, 'edit'])->name('gerente.edit');
+Route::put('gerente/{gerente}/actualizar', [GerenteController::class, 'update'])->name('gerente.update');
+Route::delete('gerente/{gerente}/eliminar', [GerenteController::class, 'destroy'])->name('gerente.destroy');
+
+Route::get('cliente/registrar', [ClienteController::class, 'create'])->name('cliente.crear');
+Route::get('cliente/index', [ClienteController::class, 'index'])->name('cliente.index');
+Route::post('cliente/guardar', [ClienteController::class, 'store'])->name('cliente.store');
+Route::get('cliente/{cliente}/editar', [ClienteController::class, 'edit'])->name('cliente.edit');
+Route::put('cliente/{cliente}/actualizar', [ClienteController::class, 'update'])->name('cliente.update');
+Route::delete('cliente/{cliente}/eliminar', [ClienteController::class, 'destroy'])->name('cliente.destroy');
+
+Route::get('maquina/registrar', [MaquinaController::class, 'create'])->name('maquina.crear');
+Route::get('maquina/index', [MaquinaController::class, 'index'])->name('maquina.index');
+Route::post('maquina/guardar', [MaquinaController::class, 'store'])->name('maquina.store');
+Route::get('maquina/{maquina}/editar', [MaquinaController::class, 'edit'])->name('maquina.edit');
+Route::put('maquina/{maquina}/actualizar', [MaquinaController::class, 'update'])->name('maquina.update');
+Route::delete('maquina/{maquina}/eliminar', [MaquinaController::class, 'destroy'])->name('maquina.destroy');
+
+Route::get('reporte/registrar', [ReporteController::class, 'create'])->name('reporte.crear');
+Route::get('reporte/index', [ReporteController::class, 'index'])->name('reporte.index');
+Route::post('reporte/guardar', [ReporteController::class, 'store'])->name('reporte.store');
+Route::get('reporte/{reporte}/editar', [ReporteController::class, 'edit'])->name('reporte.edit');
+Route::put('reporte/{reporte}/actualizar', [ReporteController::class, 'update'])->name('reporte.update');
+Route::delete('reporte/{reporte}/eliminar', [ReporteController::class, 'destroy'])->name('reporte.destroy');
+
+Route::get('rutina/registrar', [RutinaController::class, 'create'])->name('rutina.crear');
+Route::get('rutina/index', [RutinaController::class, 'index'])->name('rutina.index');
+Route::post('rutina/guardar', [RutinaController::class, 'store'])->name('rutina.store');
+Route::get('rutina/{rutina}/editar', [RutinaController::class, 'edit'])->name('rutina.edit');
+Route::put('rutina/{rutina}/actualizar', [RutinaController::class, 'update'])->name('rutina.update');
+Route::delete('rutina/{rutina}/eliminar', [RutinaController::class, 'destroy'])->name('rutina.destroy');
+

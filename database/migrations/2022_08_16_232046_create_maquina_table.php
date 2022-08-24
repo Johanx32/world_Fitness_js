@@ -15,6 +15,14 @@ return new class extends Migration
     {
         Schema::create('maquina', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre_Maquina');
+            $table->string('proveedor');
+            $table->integer('cantidad');
+            $table->string('lugar_Maquina');
+            $table->string('foto_Maquina');
+            $table->boolean('estado_Maquina');
+            $table->integer('id_Mantenimiento');
+            $table->integer('identificacion_Gerente_FK');
             $table->timestamps();
         });
     }

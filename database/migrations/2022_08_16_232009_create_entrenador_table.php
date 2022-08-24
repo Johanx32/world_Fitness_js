@@ -15,6 +15,13 @@ return new class extends Migration
     {
         Schema::create('entrenador', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre_Entre');
+            $table->string('apellido_Entre');
+            $table->date('fecha_Nac_Entre');
+            $table->integer('telefono_Entre');
+            $table->string('direccion_Entre');
+            $table->boolean('estado_Entre');
+            $table->integer('identificacion_Usuario_FK');
             $table->timestamps();
         });
     }

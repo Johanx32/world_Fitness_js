@@ -9,7 +9,8 @@ class Gerente extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['identificacion_Gerente',
+    protected $table = 'gerente';
+    protected $fillable = [
                             'nombre_Geren',
                             'apellido_Geren',
                             'fecha_Nac_Geren',

@@ -8,50 +8,64 @@ class ClienteController extends Controller
 {
     public function index()
     {
-        $client = Cliente::all();
-        return $client;
+        $cliente = Cliente::orderByDesc('id')->get();
+        return view('auth.cliente.index', compact('cliente'));
+    }
+
+    public function create()
+    {
+        return view('auth.cliente.crear');
     }
 
     public function store(Request $request)
     {
-       $client = new Cliente();
-       $client->identificacion_Cliente = $request->description;
-       $client->nombre_Clie = $request->nombre_Clie;
-       $client->apellido_Clie = $request->apellido_Clie;
-       $client->fecha_Nac_Clie = $request-> fecha_Nac_Clie;
-       $client->telefono_Clie = $request-> telefono_Clie;
-       $client->direccion_Clie = $request-> direccion_Clie;
-       $client->estado_Clie = $request-> estado_Clie;
-       $client->identificacion_Usuario_FK->$request->identificacion_Usuario_FK;
+        $datos = $request->validate(
+            [
+                'nombre_Clie' => ' required| max:50',
+                'apellido_Clie' => 'required| max:50',
+                'fecha_Nac_Clie' => 'required',
+                'telefono_Clie' => 'required',
+                'direccion_Clie' => 'required| max:50',
+                'estado_Clie' => 'required',
+                'identificacion_Usuario_FK' => 'required'
+            ]
+        );
 
-       $client->save();
+        $cliente = Cliente::create($datos);
+        return redirect()->route('auth.cliente.index');
     }
 
-    public function show($id)
+    public function show(Cliente $cliente)
     {
-        $client = Cliente::find($id);
-        return $client;
+        //
     }
 
-    public function update(Request $request, $id)
+    public function edit(Cliente $cliente)
     {
-       $client = Cliente::findOrfail($request->id);
-       $client->identificacion_Cliente = $request->description;
-       $client->nombre_Clie = $request->nombre_Clie;
-       $client->apellido_Clie = $request->apellido_Clie;
-       $client->fecha_Nac_Clie = $request-> fecha_Nac_Clie;
-       $client->telefono_Clie = $request-> telefono_Clie;
-       $client->direccion_Clie = $request-> direccion_Clie;
-       $client->estado_Clie = $request-> estado_Clie;
-       $client->identificacion_Usuario_FK->$request->identificacion_Usuario_FK;
-
-       $client->save();
-       return $client;
+        return view('auth.cliente.edit', compact('cliente'));
     }
 
-    public function destroy($id)
+    public function update(Request $request, Cliente $cliente)
     {
-       $client = Cliente::destroy($id);
-       return $client;
+        $datos = $request->validate(
+            [
+                'nombre_Clie' => ' required| max:50',
+                'apellido_Clie' => 'required| max:50',
+                'fecha_Nac_Clie' => 'required',
+                'telefono_Clie' => 'required',
+                'direccion_Clie' => 'required| max:50',
+                'estado_Clie' => 'required',
+                'identificacion_Usuario_FK' => 'required'
+            ]
+        );
+
+            $cliente->update($datos);
+            return redirect()->route('auth.cliente.index');
+    }
+
+    public function destroy(Cliente $cliente)
+    {
+        $cliente->delete();
+        return redirect()->route('auth.cliente.index');
     }
 }
