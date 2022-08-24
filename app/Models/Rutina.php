@@ -13,6 +13,7 @@ class Rutina extends Model
        'nombre_Rutina',
        'objetivo',
        'estado_Rutina',
+       'id_Ejercicio_FK',
        'identificacion_Entrenador_FK',
        'identificacion_Cliente_FK'
    ];

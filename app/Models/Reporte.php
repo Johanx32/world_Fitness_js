@@ -14,6 +14,7 @@ class Reporte extends Model
         'fecha_Reporte',
         'descripcion',
         'estado_Reporte',
+        'id_Maquina_FK',
         'identificacion_Usuario_FK'
     ];
 

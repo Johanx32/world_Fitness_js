@@ -16,6 +16,6 @@ class Gerente extends Model
                             'fecha_Nac_Geren',
                             'telefono_Geren',
                             'direccion_Geren',
-                            'estado_Geren',
                             'identificacion_Usuario_FK'];
+
 }

@@ -20,8 +20,9 @@ return new class extends Migration
             $table->date('fecha_Nac_Geren');
             $table->string('telefono_Geren');
             $table->string('direccion_Geren');
-            $table->integer('identificacion_Usuario_FK');
+            $table->unsignedBigInteger('identificacion_Usuario_FK');
             $table->timestamps();
+
         });
     }
 

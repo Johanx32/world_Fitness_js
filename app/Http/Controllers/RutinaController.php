@@ -10,12 +10,12 @@ class RutinaController extends Controller
     public function index()
     {
         $rutina = Rutina::orderByDesc('id')->get();
-        return view('rutina.index', compact('rutina'));
+        return view('auth.rutina.index', compact('rutina'));
     }
 
     public function create()
     {
-        return view('rutina.crear');
+        return view('auth.rutina.create');
     }
 
     public function store(Request $request)

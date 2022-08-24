@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('nombre_Ejercicio');
             $table->time('tiempo_Ejercicio');
-            $table->integer('series_Ejercicio');
+            $table->string('series_Ejercicio');
             $table->string('musculos_Involucrados');
             $table->string('ejemplo_Ejercicio');
             $table->boolean('estado_Ejercicio');

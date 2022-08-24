@@ -9,13 +9,13 @@ class ReporteController extends Controller
 {
     public function index()
     {
-        $reporte = Reporte::orderByDesc('id')->get();
-        return view('reporte.index', compact('reporte'));
+        $reporte = Reporte::get();
+        return view('auth.reporte.index', compact('reporte'));
     }
 
     public function create()
     {
-        return view('reporte.crear');
+        return view('auth.reporte.create');
     }
 
     public function store(Request $request)
@@ -24,7 +24,7 @@ class ReporteController extends Controller
             [
                 'fecha_Reporte' => ' required| max:50',
                 'descripcion' => 'required| max:50',
-                'estado_Mantenimiento' => 'required',
+                'estado_Reporte' => 'required',
                 'id_Maquina_FK' => 'required',
                 'identificacion_Usuario_FK' => 'required'
             ]
@@ -41,7 +41,7 @@ class ReporteController extends Controller
 
     public function edit(Reporte $reporte)
     {
-        return view('reporte.edit', compact('reporte'));
+        return view('auth.reporte.edit', compact('reporte'));
     }
 
     public function update(Request $request, Reporte $reporte)
@@ -50,7 +50,7 @@ class ReporteController extends Controller
             [
                 'fecha_Reporte' => ' required| max:50',
                 'descripcion' => 'required| max:50',
-                'estado_Mantenimiento' => 'required',
+                'estado_Reporte' => 'required',
                 'id_Maquina_FK' => 'required',
                 'identificacion_Usuario_FK' => 'required'
             ]

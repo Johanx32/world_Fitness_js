@@ -10,13 +10,13 @@ class GerenteController extends Controller
 
   public function index()
     {
-        $gerente = Gerente::orderByDesc('id')->get();
+        $gerente = Gerente::get();
         return view('auth.gerente.index', compact('gerente'));
     }
 
     public function create()
     {
-        return view('auth.gerente.crear');
+        return view('auth.gerente.create');
     }
 
     public function store(Request $request)
@@ -33,7 +33,7 @@ class GerenteController extends Controller
         );
 
         $gerente = Gerente::create($datos);
-        return redirect()->route('auth.gerente.index');
+        return redirect()->route('gerente.index');
     }
 
     public function show(Gerente $gerente)
@@ -60,12 +60,12 @@ class GerenteController extends Controller
         );
 
             $gerente->update($datos);
-            return redirect()->route('auth.gerente.index');
+            return redirect()->route('gerente.index');
     }
 
     public function destroy(Gerente $gerente)
     {
         $gerente->delete();
-        return redirect()->route('auth.gerente.index');
+        return redirect()->route('gerente.index');
     }
 }

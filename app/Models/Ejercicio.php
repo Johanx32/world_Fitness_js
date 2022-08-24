@@ -13,7 +13,8 @@ class Ejercicio extends Model
     protected $fillable = [
         'nombre_Ejercicio',
         'tiempo_Ejercicio',
-        'series_Involucrados',
+        'series_Ejercicio',
+        'musculos_Involucrados',
         'ejemplo_Ejercicio',
         'estado_Ejercicio'
     ];

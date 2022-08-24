@@ -9,29 +9,32 @@ class MaquinaController extends Controller
 {
     public function index()
     {
-        $maquina = Maquina::orderByDesc('id')->get();
+        $maquina = Maquina::get();
         return view('auth.maquina.index', compact('maquina'));
     }
 
     public function create()
     {
-        return view('auth.maquina.crear');
+        return view('auth.maquina.create');
     }
 
     public function store(Request $request)
     {
         $datos = $request->validate(
             [
-                'fecha_Reporte' => ' required| max:50',
-                'descripcion' => 'required| max:50',
-                'estado_Mantenimiento' => 'required',
-                'id_Maquina_FK' => 'required',
-                'identificacion_Usuario_FK' => 'required'
+                'nombre_Maquina' => ' required| max:50',
+                'proveedor' => 'required| max:50',
+                'cantidad' => 'required',
+                'lugar_Maquina' => 'required| max:50',
+                'foto_Maquina' => 'required',
+                'id_Mantenimiento_FK' => 'required',
+                'identificacion_Gerente_FK' => 'required',
+                'estado_Maquina' => 'required'
             ]
         );
 
         $maquina = Maquina::create($datos);
-        return redirect()->route('auth.maquina.index');
+        return redirect()->route('maquina.index');
     }
 
     public function show(Maquina $maquina)
@@ -48,21 +51,24 @@ class MaquinaController extends Controller
     {
         $datos = $request->validate(
             [
-                'fecha_Reporte' => ' required| max:50',
-                'descripcion' => 'required| max:50',
-                'estado_Mantenimiento' => 'required',
-                'id_Maquina_FK' => 'required',
-                'identificacion_Usuario_FK' => 'required'
+                'nombre_Maquina' => ' required| max:50',
+                'proveedor' => 'required| max:50',
+                'cantidad' => 'required',
+                'lugar_Maquina' => 'required| max:50',
+                'foto_Maquina' => 'required',
+                'id_Mantenimiento_FK' => 'required',
+                'identificacion_Gerente_FK' => 'required',
+                'estado_Maquina' => 'required'
             ]
         );
 
             $maquina->update($datos);
-            return redirect()->route('auth.maquina.index');
+            return redirect()->route('maquina.index');
     }
 
     public function destroy(Maquina $maquina)
     {
         $maquina->delete();
-        return redirect()->route('auth.maquina.index');
+        return redirect()->route('maquina.index');
     }
 }

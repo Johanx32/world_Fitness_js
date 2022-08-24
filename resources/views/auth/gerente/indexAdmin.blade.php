@@ -32,7 +32,7 @@
           <li><a href="{{ route('usuario.index') }}">Usuarios</a></li>
           <li><a href="{{ route('cliente.index') }}">Clientes</a></li>
           <li><a href="{{ route('entrenador.index') }}">Entrenadores</a></li>
-          <li><a href="#">Gerente</a></li>
+          <li><a href="{{ route('gerente.index') }}">Gerente</a></li>
         </ul>
         
       </li>
@@ -48,9 +48,9 @@
 
         <ul class="sub-menu">
         <li><a class="link_name" href="#">Entrenamiento</a></li>
-        <li><a href="#">Rutinas</a></li>
+        <li><a href="{{ route('rutina.index') }}">Rutinas</a></li>
           <li><a href="{{ route('valoracion_fisica.index')}}">Valoracion Fisica</a></li>
-          <li><a href="#">Ejercicios</a></li>
+          <li><a href="{{ route('ejercicio.index') }}">Ejercicios</a></li>
         </ul>
         
       </li>
@@ -65,9 +65,9 @@
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Maquinaria</a></li>
-          <li><a href="#">Maquinarias</a></li>
+          <li><a href="{{ route('maquina.index') }}">Maquinarias</a></li>
           <li><a href="{{ route('mantenimiento.index') }}">Mantenimiento</a></li>
-          <li><a href="#">Reportes</a></li>
+          <li><a href="{{ route('reporte.index') }}">Reportes</a></li>
         </ul>
       </li>
 
@@ -87,8 +87,8 @@
         <!--<img src="image/profile.jpg" alt="profileImg">-->
       </div>
       <div class="name-job">
-        <div class="profile_name">Santiago duarte</div>
-        <div class="job">Administrador</div>
+        <div class="profile_name">Johan Fonseca</div>
+        <div class="job">Gerente</div>
       </div>
       <a href="{{ route('login.login') }}"><i class='bx bx-log-out'></i></a>
     </div>

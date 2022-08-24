@@ -18,7 +18,7 @@ class Maquina extends Model
          'foto_Maquina',
          'estado_Maquina',
          'id_Mantenimiento_FK',
-         'identificacion_Usuario_FK'
+         'identificacion_Gerente_FK'
      ];
  
      protected $timestamp = false;
