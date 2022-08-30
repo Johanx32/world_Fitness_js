@@ -10,7 +10,7 @@ class MantenimientoController extends Controller
 
     public function index()
     {
-        $mantenimiento = Mantenimiento::orderByDesc('id')->get();
+        $mantenimiento = Mantenimiento::get();
         return view('auth.mantenimiento.index', compact('mantenimiento'));
     }
 
@@ -32,7 +32,7 @@ class MantenimientoController extends Controller
         );
 
         $mantenimiento = Mantenimiento::create($datos);
-        return redirect()->route('mantenimiento.index');
+        return view('auth.mantenimiento.creado');    
     }
 
     public function show(Mantenimiento $mantenimiento)

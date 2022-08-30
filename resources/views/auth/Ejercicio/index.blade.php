@@ -6,11 +6,12 @@
     <h3>Listado de Ejercicios</h3>
     
     <div class="col-sm-12">
-    <a href="{{ route('ejercicio.create') }}" class="btn btn-link">Crear Ejercicio</a>
-                <a href="{{ route('ejercicio.index') }}" class="btn btn-link">Listar Ejercicios</a>
-                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+    <a href="{{ route('ejercicio.create') }}" class="btn btn-outline-secondary">Crear Ejercicio</a>
+                <a href="{{ route('ejercicio.index') }}" class="btn btn-outline-secondary">Listar Ejercicios</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-outline-secondary">Volver</a>
     </div>
-    <table class="table table-stripped table-hover">
+    <br>
+    <table class="table table-sm">
         <thead>
             <tr>
                 <th>
@@ -29,8 +30,7 @@
                     Musculos Involucrados
                 </th>
                 <th>
-                    Ejemplo
-                </th>
+                    EjemploDescripcion
                 <th>
                     Estado
                 </th>
@@ -53,7 +53,7 @@
                     {{ $ejercicio->tiempo_Ejercicio }}
                 </td>
                 <td>
-                    {{ $ejercicio->series_Ejercicios }}
+                    {{ $ejercicio->series_Ejercicio }}
                 </td>
                 <td>
                     {{ $ejercicio->musculos_Involucrados }}
@@ -70,7 +70,7 @@
                         @method('delete')
                         <button type="submit" class="btn btn-danger btn-sm">Borrar</button>
                     </form>
-                    <a href="{{ route('ejercicio.edit', $ejercicio) }}">Editar</a>
+                    <a href="{{ route('ejercicio.edit', $ejercicio) }}"  class="btn btn-warning btn-sm">Editar</a>
                 </td>
             </tr>
             @endforeach

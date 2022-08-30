@@ -29,7 +29,7 @@ class UsuarioController extends Controller
         );
 
         $usuario = Usuario::create($datos);
-        return redirect()->route('usuario.index');
+        return view('auth.usuario.creado');
     }
 
     public function show(Usuario $usuario)

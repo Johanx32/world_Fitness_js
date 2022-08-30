@@ -6,11 +6,12 @@
     <h3>Listado de Clientes</h3>
     
     <div class="col-sm-12">
-    <a href="{{ route('cliente.create') }}" class="btn btn-link">Crear cliente</a>
-                <a href="{{ route('cliente.index') }}" class="btn btn-link">Listar clientes</a>
-                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+    <a href="{{ route('cliente.create') }}" class="btn btn-outline-secondary">Crear Cliente</a>
+                <a href="{{ route('cliente.index') }}" class="btn btn-outline-secondary">Listar Clientes</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-outline-secondary">Volver</a>
     </div>
-    <table class="table table-stripped table-hover">
+    <br>
+    <table class="table table-sm">
         <thead>
             <tr>
                 <th>
@@ -20,7 +21,7 @@
                     Nombre
                 </th>
                 <th>
-                    Apelli
+                    Apellido
                 </th>
                 <th>
                     Fecha Nacimiento
@@ -30,6 +31,12 @@
                 </th>
                 <th>
                     Direccion
+                </th>
+                <th>
+                    Identificacion Usuario
+                </th>
+                <th>
+                    Id Valoracion Fisica
                 </th>
                 <th>
                     Estado
@@ -62,6 +69,12 @@
                     {{ $cliente->direccion_Clie }}
                 </td>
                 <td>
+                    {{ $cliente->identificacion_Usuario_FK }}
+                </td>
+                <td>
+                    {{ $cliente->id_valoracionFisica_FK }}
+                </td>
+                <td>
                     {{ $cliente->estado_Clie() }}
                 </td>
                 <td>
@@ -70,7 +83,7 @@
                         @method('delete')
                         <button type="submit" class="btn btn-danger btn-sm">Borrar</button>
                     </form>
-                    <a href="{{ route('cliente.edit', $cliente) }}">Editar</a>
+                    <a href="{{ route('cliente.edit', $cliente) }}" class="btn btn-warning btn-sm">Editar</a>
                 </td>
             </tr>
             @endforeach

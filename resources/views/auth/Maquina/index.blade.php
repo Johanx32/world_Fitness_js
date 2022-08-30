@@ -5,11 +5,12 @@
 @section('contenido')
     <h3>Listado de Maquinas</h3>
     <div class="col-sm-12">
-                <a href="{{ route('maquina.create') }}" class="btn btn-link">Crear Maquina</a>
-                <a href="{{ route('maquina.index') }}" class="btn btn-link">Listar Maquinas</a>
-                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+                <a href="{{ route('maquina.create') }}" class="btn btn-outline-secondary">Crear Maquina</a>
+                <a href="{{ route('maquina.index') }}" class="btn btn-outline-secondary">Listar Maquinas</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-outline-secondary">Volver</a>
             </div>
-    <table class="table table-stripped table-hover">
+            <br>
+    <table class="table table-sm">
         <thead>
             <tr>
                 <th>
@@ -67,7 +68,7 @@
                     {{ $maquina->foto_Maquina }}
                 </td>
                 <td>
-                    {{ $maquina->id_Mantenimiento }}
+                    {{ $maquina->id_Mantenimiento_FK }}
                 </td>
                 <td>
                     {{ $maquina->identificacion_Gerente_FK }}
@@ -81,7 +82,7 @@
                         @method('delete')
                         <button type="submit" class="btn btn-danger btn-sm">Borrar</button>
                     </form>
-                    <a href="{{ route('maquina.edit', $maquina) }}">Editar</a>
+                    <a href="{{ route('maquina.edit', $maquina) }}" class="btn btn-warning btn-sm">Editar</a>
                 </td>
             </tr>
             @endforeach

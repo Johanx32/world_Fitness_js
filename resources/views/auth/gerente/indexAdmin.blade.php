@@ -65,7 +65,7 @@
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Maquinaria</a></li>
-          <li><a href="{{ route('maquina.index') }}">Maquinarias</a></li>
+          <li><a href="{{ route('maquina.index') }}">Maquinas</a></li>
           <li><a href="{{ route('mantenimiento.index') }}">Mantenimiento</a></li>
           <li><a href="{{ route('reporte.index') }}">Reportes</a></li>
         </ul>

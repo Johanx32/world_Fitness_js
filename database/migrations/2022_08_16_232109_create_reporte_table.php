@@ -18,9 +18,13 @@ return new class extends Migration
             $table->date('fecha_Reporte');
             $table->string('descripcion');
             $table->boolean('estado_Reporte');
-            $table->integer('id_Maquina_FK');
+            $table->unsignedBigInteger('id_Maquina_FK');
             $table->unsignedBigInteger('identificacion_Usuario_FK');
             $table->timestamps();
+
+            $table->foreign('id_Maquina_FK')->references('id')->on('maquina');
+            $table->foreign('identificacion_Usuario_FK')->references('id')->on('usuario');
+        
         });
     }
 

@@ -5,16 +5,15 @@
 @section('contenido')
     <h3>Nuevo Entrenador</h3>
     <div class="col-sm-12">
-                <a href="{{ route('entrenador.create') }}" class="btn btn-link">Crear Entrenador</a>
-                <a href="{{ route('entrenador.index') }}" class="btn btn-link">Listar Entrenador</a>
-                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
-                <a href="" class="btn btn-link">Volver</a>
+                <a href="{{ route('entrenador.create') }}" class="btn btn-outline-secondary">Crear Entrenador</a>
+                <a href="{{ route('entrenador.index') }}" class="btn btn-outline-secondary">Listar Entrenador</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-outline-secondary">Volver</a>
             </div>
     <form action="{{ route('entrenador.store') }}" method="POST">
         @csrf
+        <br>
         <div class="row">
             <div class="col-sm-6">
-                <input type="hidden" name="id" class="form-control"><br><br>
                 <label for="nombre_Entre" class="form-label">Nombre</label><br>
                 <input type="text" name="nombre_Entre" class="form-control" id="nombre_Entre"><br><br>
             </div>
@@ -39,7 +38,7 @@
                 <input type="text" name="direccion_Entre" class="form-control" id="direccion_Entre"><br><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="estado_Entre" class="form-label">Estado</label><br>
                 <select name="estado_Entre" id="estado_Entre" class="form-select">
                     <option value="1">Activo</option>
@@ -48,13 +47,17 @@
             </div>
 
             <div class="col-sm-6">
-                <input type="hidden" name="id" class="form-control"><br><br>
-                <label for="identificacion_Usuario_FK" class="form-label">Id Usuario</label><br>
-                <input type="text" name="identificacion_Usuario_FK" class="form-control" id="identificacion_Usuario_FK"><br><br>
+            <label for="identificacion_Usuario_FK" class="form-label">Seleccione el usuario que corresponde:</label><br>
+            <select name="identificacion_Usuario_FK" id="identificacion_Usuario_FK" class="form-select">
+                    @foreach ($usuario as $usuario)
+                <option value="{{ $usuario->id }}">
+                    {{ $usuario->user}}
+                    @endforeach
+            </select>
             </div>
             
             <div class="col-sm-12 text-end my-2">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-outline-success">
                     Guardar
                 </button>
             </div>

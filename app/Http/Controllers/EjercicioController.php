@@ -10,7 +10,7 @@ class EjercicioController extends Controller
 
     public function index()
     {
-        $ejercicio = Ejercicio::orderByDesc('id')->get();
+        $ejercicio = Ejercicio::get();
         return view('auth.ejercicio.index', compact('ejercicio'));
     }
 
@@ -33,7 +33,7 @@ class EjercicioController extends Controller
         );
 
         $ejercicio = Ejercicio::create($datos);
-        return redirect()->route('ejercicio.index');
+        return view('auth.ejercicio.creado');
     }
 
     public function show(Ejercicio $ejercicio)

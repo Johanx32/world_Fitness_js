@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Gerente;
+use App\Models\Usuario;
 
 class GerenteController extends Controller
 {
@@ -16,7 +17,8 @@ class GerenteController extends Controller
 
     public function create()
     {
-        return view('auth.gerente.create');
+        $usuario = Usuario::All();
+        return view('auth.gerente.create')->with('usuario',$usuario);
     }
 
     public function store(Request $request)
@@ -33,7 +35,7 @@ class GerenteController extends Controller
         );
 
         $gerente = Gerente::create($datos);
-        return redirect()->route('gerente.index');
+        return view('auth.gerente.creado');
     }
 
     public function show(Gerente $gerente)
@@ -43,7 +45,8 @@ class GerenteController extends Controller
 
     public function edit(Gerente $gerente)
     {
-        return view('auth.gerente.edit', compact('gerente'));
+        $usuario = Usuario::All();
+        return view('auth.gerente.edit', compact('gerente'))->with('usuario',$usuario);
     }
 
     public function update(Request $request, Gerente $gerente)
@@ -55,7 +58,7 @@ class GerenteController extends Controller
                 'fecha_Nac_Geren' => 'required',
                 'telefono_Geren' => 'required',
                 'direccion_Geren' => 'required| max:50',
-                'identificacion_Usuario_FK' => 'required'
+                'identificacion_Usuario_FK'
             ]
         );
 

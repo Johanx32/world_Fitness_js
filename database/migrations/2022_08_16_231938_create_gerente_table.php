@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('direccion_Geren');
             $table->unsignedBigInteger('identificacion_Usuario_FK');
             $table->timestamps();
+            $table->foreign('identificacion_Usuario_FK')->references('id')->on('usuario');
 
         });
     }

@@ -18,10 +18,15 @@ return new class extends Migration
             $table->string('nombre_Rutina');
             $table->string('objetivo');
             $table->boolean('estado_Rutina');
-            $table->integer('id_Ejercicio_FK');
-            $table->integer('identificacion_Entrenador_FK');
-            $table->integer('identificacion_Cliente_FK');
+            $table->unsignedBigInteger('id_Ejercicio_FK');
+            $table->unsignedBigInteger('identificacion_Entrenador_FK');
+            $table->unsignedBigInteger('identificacion_Cliente_FK');
             $table->timestamps();
+
+            $table->foreign('id_Ejercicio_FK')->references('id')->on('ejercicio');
+            $table->foreign('identificacion_Entrenador_FK')->references('id')->on('entrenador');
+            $table->foreign('identificacion_Cliente_FK')->references('id')->on('cliente');
+
         });
     }
 

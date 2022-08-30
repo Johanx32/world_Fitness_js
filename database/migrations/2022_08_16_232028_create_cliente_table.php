@@ -21,8 +21,13 @@ return new class extends Migration
             $table->string('telefono_Clie');
             $table->string('direccion_Clie');
             $table->boolean('estado_Clie');
-            $table->integer('identificacion_Usuario_FK');
+            $table->unsignedBigInteger('identificacion_Usuario_FK');
+            $table->unsignedBigInteger('id_valoracionFisica_FK');
             $table->timestamps();
+
+            $table->foreign('id_valoracionFisica_FK')->references('id')->on('valoracion_fisica');
+            $table->foreign('identificacion_Usuario_FK')->references('id')->on('usuario');
+
         });
     }
 

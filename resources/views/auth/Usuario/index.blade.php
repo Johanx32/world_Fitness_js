@@ -6,11 +6,12 @@
     <h3>Listado de Usuarios</h3>
     
     <div class="col-sm-12">
-    <a href="{{ route('usuario.create') }}" class="btn btn-link">Crear Usuario</a>
-    <a href="{{ route('usuario.index') }}" class="btn btn-link">Listar Usuarios</a>
-    <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+    <a href="{{ route('usuario.create') }}" class="btn btn-outline-secondary">Crear Usuario</a>
+    <a href="{{ route('usuario.index') }}" class="btn btn-outline-secondary">Listar Usuarios</a>
+    <a href="{{ route('gerente.indexadmin') }}"class="btn btn-outline-secondary">Volver</a>
     </div>
-    <table class="table table-stripped table-hover">
+    <br>
+    <table class="table table-sm">
         <thead>
             <tr>
                 <th>
@@ -46,34 +47,10 @@
                         @method('delete')
                         <button type="submit" class="btn btn-danger btn-sm" class="formulario-eliminar">Borrar</button>
                     </form>
-                    <a href="{{ route('usuario.edit', $usuario) }}">Editar</a>
+                    <a href="{{ route('usuario.edit', $usuario) }}"  class="btn btn-warning btn-sm">Editar</a>
                 </td>
             </tr>
             @endforeach
         </tbody>
     </table>
 @endsection
-<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<script>
-    $('formulario-eliminar').submit(function(e){
-        e.preventDefault();
-        Swal.fire({
-  title: 'Are you sure?',
-  text: "You won't be able to revert this!",
-  icon: 'warning',
-  showCancelButton: true,
-  confirmButtonColor: '#3085d6',
-  cancelButtonColor: '#d33',
-  confirmButtonText: 'Yes, delete it!'
-}).then((result) => {
-  if (result.isConfirmed) {
-    Swal.fire(
-      'Deleted!',
-      'Your file has been deleted.',
-      'success'
-    )
-    this.submit();
-  }
-})
-    })
-</script>

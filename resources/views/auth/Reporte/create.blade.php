@@ -5,44 +5,55 @@
 @section('contenido')
     <h3>Nuevo Reporte</h3>
     <div class="col-sm-12">
-                <a href="{{ route('reporte.create') }}" class="btn btn-link">Crear Reporte</a>
-                <a href="{{ route('reporte.index') }}" class="btn btn-link">Listar Reportes</a>
-                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+                <a href="{{ route('reporte.create') }}" class="btn btn-outline-secondary">Crear Reporte</a>
+                <a href="{{ route('reporte.index') }}" class="btn btn-outline-secondary">Listar Reportes</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-outline-secondary">Volver</a>
             </div>
     <form action="{{ route('reporte.store') }}" method="POST">
         @csrf
+        <br>
         <div class="row">
             <div class="col-sm-12">
-                <input type="hidden" name="id" class="form-control"><br><br>
                 <label for="fecha_Reporte" class="form-label">Fecha Reporte</label><br>
-                <input type="date" name="fecha_Reporte" class="form-control" id="fecha_Reporte"><br><br>
+                <input type="date" name="fecha_Reporte" class="form-control" id="fecha_Reporte"><br>
             </div>
 
             <div class="col-sm-12">
                 <label for="descripcion" class="form-label">Descripcion</label><br>
-                <input type="text" name="descripcion" class="form-control" id="descripcion"><br><br>
+                <input type="text" name="descripcion" class="form-control" id="descripcion"><br>
             </div>
 
-            <div class="col-sm-12">
-                <label for="id_Maquina_FK" class="form-label">id Mantenimiento</label><br>
-                <input type="text" name="id_Maquina_FK" class="form-control" id="id_Maquina_FK"><br><br>
+            <div class="col-sm-6">
+            <label for="id_Maquina_FK" class="form-label">Seleccione la maquina que corresponde:</label><br>
+            <select name="id_Maquina_FK" id="id_Maquina_FK" class="form-select">
+                    @foreach ($maquina as $maquina)
+                <option value="{{ $maquina->id }}">
+                    {{ $maquina->nombre_Maquina}}
+                    @endforeach
+            </select>
             </div>
 
-            <div class="col-sm-12">
-                <label for="identificacion_Usuario_FK" class="form-label">Identificacion Gerente</label><br>
-                <input type="text" name="identificacion_Usuario_FK" class="form-control" id="identificacion_Usuario_FK"><br><br>
+            <div class="col-sm-6">
+            <label for="identificacion_Usuario_FK" class="form-label">Seleccione el Usuario que corresponde:</label><br>
+            <select name="identificacion_Usuario_FK" id="identificacion_Usuario_FK" class="form-select">
+                    @foreach ($usuario as $usuario)
+                <option value="{{ $usuario->id }}">
+                    {{ $usuario->user}}
+                    @endforeach
+            </select>
             </div>
+
 
             <div class="col-sm-12">
                 <label for="estado_Reporte" class="form-label">Estado</label><br>
                 <select name="estado_Reporte" id="estado_Reporte" class="form-select">
                     <option value="1">Activo</option>
                     <option value="0">Inactivo</option>
-                </select><br>
+                </select>
             </div>
 
             <div class="col-sm-12 text-end my-2">
-                <button type="submit" class="btn btn-primary">
+                <button type="submit" class="btn btn-outline-success">
                     Guardar
                 </button>
             </div>

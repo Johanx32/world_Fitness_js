@@ -21,9 +21,13 @@ return new class extends Migration
             $table->string('lugar_Maquina');
             $table->string('foto_Maquina');
             $table->boolean('estado_Maquina');
-            $table->integer('id_Mantenimiento_FK');
-            $table->integer('identificacion_Gerente_FK');
+            $table->unsignedBigInteger('id_Mantenimiento_FK');
+            $table->unsignedBigInteger('identificacion_Gerente_FK');
             $table->timestamps();
+
+            $table->foreign('id_Mantenimiento_FK')->references('id')->on('mantenimiento');
+            $table->foreign('identificacion_Gerente_FK')->references('id')->on('gerente');
+
         });
     }
 

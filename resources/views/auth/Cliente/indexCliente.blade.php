@@ -32,34 +32,25 @@
 
       <li>
         <div class="iocn-link">
-          <a href="#">
+          <a href="{{ Route('rutina.index') }}">
             <i class="fa-solid fa-users"></i>
             <span class="link_name">Rutina</span>
           </a>
           <i class='bx bxs-chevron-down arrow' ></i>
         </div>
-
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Rutina</a></li>
-          <li><a href="#">Ver rutina actual</a></li>
-          <li><a href="#">Rutinas</a></li>
-        </ul>
-        
       </li>
     
 
 
       <li>
         <div class="iocn-link">
-          <a href="#">
+          <a href="{{ Route('maquina.index') }}">
             <i class="fa-solid fa-triangle-exclamation"></i>
             <span class="link_name">Maquinaria</span>
           </a>
           <i class='bx bxs-chevron-down arrow' ></i>
         </div>
         <ul class="sub-menu">
-          <li><a class="link_name" href="#">Maquinaria</a></li>
-          <li><a href="#">Ver Maquinarias</a></li>
           <li><a href="#">Reportar</a></li>
         </ul>
       </li>
@@ -114,7 +105,7 @@
             <h4>Maquinas</h4>
         </div>
         <div class="box">
-            <i class="lni lni-warning""></i>
+            <i class="lni lni-warning"></i>
             <h5>Reportar Maquina</h5>
             <h4>Reportar</h4>
         </div>

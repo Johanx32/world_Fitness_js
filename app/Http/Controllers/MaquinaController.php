@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Maquina;
+use App\Models\Mantenimiento;
+use App\Models\Gerente;
 use Illuminate\Http\Request;
 
 class MaquinaController extends Controller
@@ -15,7 +17,9 @@ class MaquinaController extends Controller
 
     public function create()
     {
-        return view('auth.maquina.create');
+        $mantenimiento = Mantenimiento::All();
+        $gerente = Gerente::All();
+        return view('auth.maquina.create')->with('mantenimiento',$mantenimiento)->with('gerente',$gerente);
     }
 
     public function store(Request $request)
@@ -34,7 +38,7 @@ class MaquinaController extends Controller
         );
 
         $maquina = Maquina::create($datos);
-        return redirect()->route('maquina.index');
+        return view('auth.maquina.creado');    
     }
 
     public function show(Maquina $maquina)
@@ -56,8 +60,8 @@ class MaquinaController extends Controller
                 'cantidad' => 'required',
                 'lugar_Maquina' => 'required| max:50',
                 'foto_Maquina' => 'required',
-                'id_Mantenimiento_FK' => 'required',
-                'identificacion_Gerente_FK' => 'required',
+                'id_Mantenimiento_FK',
+                'identificacion_Gerente_FK',
                 'estado_Maquina' => 'required'
             ]
         );

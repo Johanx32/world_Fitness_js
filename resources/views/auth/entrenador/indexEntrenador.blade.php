@@ -30,31 +30,17 @@
       </li>
 
       <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class="fa-solid fa-users"></i>
-            <span class="link_name">Usuarios</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Usuarios</a></li>
-          <li><a href="#">Clientes</a></li>
-          <li><a href="#">Entrenadores</a></li>
-          <li><a href="#">Administradores</a></li>
-        </ul>
-        
+        <a href="{{ route('cliente.index') }}">
+          <i class="fa-solid fa-person-running"></i> 
+          <span class="link_name">Clientes</span>
+        </a>
       </li>
       
       <li>
-        <a href="#">
+        <a href="{{ route('rutina.index') }}">
           <i class="fa-solid fa-person-running"></i>
           <span class="link_name">Rutinas</span>
         </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Rutinas</a></li>
-        </ul>
       </li>
 
 
@@ -68,8 +54,8 @@
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Maquinaria</a></li>
-          <li><a href="#">Maquinarias</a></li>
-          <li><a href="#">Reportes</a></li>
+          <li><a href="{{ route('maquina.index') }}">Maquinas</a></li>
+          <li><a href="{{ route('reporte.index') }}">Reportes</a></li>
         </ul>
       </li>
 
@@ -89,8 +75,8 @@
         <!--<img src="image/profile.jpg" alt="profileImg">-->
       </div>
       <div class="name-job">
-        <div class="profile_name">Santiago duarte</div>
-        <div class="job">Administrador</div>
+        <div class="profile_name">Fabian Avellaneda</div>
+        <div class="job">Entrenador</div>
       </div>
       <a href="{{ route('login.login') }}"><i class='bx bx-log-out'></i></a>
     </div>

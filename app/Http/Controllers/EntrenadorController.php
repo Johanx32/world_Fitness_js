@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Entrenador;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class EntrenadorController extends Controller
@@ -16,7 +17,8 @@ class EntrenadorController extends Controller
 
     public function create()
     {
-        return view('auth.entrenador.create');
+        $usuario = Usuario::All();
+        return view('auth.entrenador.create')->with('usuario', $usuario);
     }
 
     public function store(Request $request)
@@ -34,7 +36,7 @@ class EntrenadorController extends Controller
         );
 
         $entrenador = Entrenador::create($datos);
-        return redirect()->route('entrenador.index');
+        return view('auth.entrenador.creado');
     }
 
     public function show(Entrenador $entrenador)
@@ -57,7 +59,7 @@ class EntrenadorController extends Controller
                 'telefono_Entre' => 'required',
                 'direccion_Entre' => 'required| max:50',
                 'estado_Entre' => 'required',
-                'identificacion_Usuario_FK' => 'required'
+                'identificacion_Usuario_FK'
             ]
         );
 

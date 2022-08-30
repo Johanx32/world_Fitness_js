@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Rutina;
+use App\Models\Ejercicio;
+use App\Models\Entrenador;
+use App\Models\Cliente;
 use Illuminate\Http\Request;
 
 class RutinaController extends Controller
@@ -15,7 +18,11 @@ class RutinaController extends Controller
 
     public function create()
     {
-        return view('auth.rutina.create');
+        $ejercicio = Ejercicio::All();
+        $entrenador = Entrenador::All();
+        $cliente = Cliente::All();
+
+        return view('auth.rutina.create')->with('ejercicio',$ejercicio)->with('entrenador',$entrenador)->with('cliente',$cliente);
     }
 
     public function store(Request $request)
@@ -32,7 +39,7 @@ class RutinaController extends Controller
         );
 
         $rutina = Rutina::create($datos);
-        return redirect()->route('rutina.index');
+        return view('auth.rutina.creado');    
     }
 
     public function show(Rutina $rutina)
@@ -42,18 +49,19 @@ class RutinaController extends Controller
 
     public function edit(Rutina $rutina)
     {
-        return view('rutina.edit', compact('rutina'));
+        return view('auth.rutina.edit', compact('rutina'));
     }
 
     public function update(Request $request, Rutina $rutina)
     {
         $datos = $request->validate(
             [
-                'fecha_Reporte' => ' required| max:50',
-                'descripcion' => 'required| max:50',
-                'estado_Mantenimiento' => 'required',
-                'id_Maquina_FK' => 'required',
-                'identificacion_Usuario_FK' => 'required'
+                'nombre_Rutina' => ' required| max:50',
+                'objetivo' => 'required| max:50',
+                'estado_Rutina' => 'required',
+                'id_Ejercicio_FK',
+                'identificacion_Entrenador_FK',
+                'identificacion_Cliente_FK'
             ]
         );
 

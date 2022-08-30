@@ -5,10 +5,11 @@
 @section('contenido')
     <h3>Listado de Mantenimientos</h3>
     <div class="col-sm-12">
-                <a href="{{ route('mantenimiento.create') }}" class="btn btn-link">Crear mantenimiento</a>
-                <a href="{{ route('mantenimiento.index') }}" class="btn btn-link">Listar mantenimientos</a>
-                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+                <a href="{{ route('mantenimiento.create') }}" class="btn btn-outline-secondary">Crear mantenimiento</a>
+                <a href="{{ route('mantenimiento.index') }}" class="btn btn-outline-secondary">Listar mantenimientos</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-outline-secondary">Volver</a>
             </div>
+            <br>
     <table class="table table-stripped table-hover">
         <thead>
             <tr>
@@ -63,7 +64,7 @@
                         @method('delete')
                         <button type="submit" class="btn btn-danger btn-sm">Borrar</button>
                     </form>
-                    <a href="{{ route('mantenimiento.edit', $mantenimiento) }}">Editar</a>
+                    <a href="{{ route('mantenimiento.edit', $mantenimiento) }}"  class="btn btn-warning btn-sm">Editar</a>
                 </td>
             </tr>
             @endforeach

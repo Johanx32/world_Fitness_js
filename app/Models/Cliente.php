@@ -16,6 +16,7 @@ class Cliente extends Model
     'telefono_Clie',
     'direccion_Clie',
     'estado_Clie',
+    'id_valoracionFisica_FK',
     'identificacion_Usuario_FK'];
 
     protected $timestamp = false;

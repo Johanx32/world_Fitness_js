@@ -5,12 +5,12 @@
 @section('contenido')
     <h3>Listado de Valoracion Fisica</h3>
     <div class="col-sm-12">
-                <a href="{{ route('valoracion_fisica.create') }}" class="btn btn-link">Crear valoracion fisica</a>
-                <a href="{{ route('valoracion_fisica.index') }}" class="btn btn-link">Listar valoracion fisicas</a>
-                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-link">Volver</a>
+                <a href="{{ route('valoracion_fisica.create') }}" class="btn btn-outline-secondary">Crear valoracion fisica</a>
+                <a href="{{ route('valoracion_fisica.index') }}" class="btn btn-outline-secondary">Listar valoracion fisicas</a>
+                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-outline-secondary">Volver</a>
             </div>
-
-    <table class="table table-stripped table-hover">
+<br>
+    <table class="table table-sm">
         <thead>
             <tr>
                 <th>
@@ -70,7 +70,7 @@
                         @method('delete')
                         <button type="submit" class="btn btn-danger btn-sm">Borrar</button>
                     </form>
-                    <a href="{{ route('valoracion_fisica.edit', $valoracion_fisica) }}">Editar</a>
+                    <a href="{{ route('valoracion_fisica.edit', $valoracion_fisica) }}"  class="btn btn-warning btn-sm">Editar</a>
                 </td>
             </tr>
             @endforeach

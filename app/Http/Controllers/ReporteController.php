@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Reporte;
+use App\Models\Maquina;
+use App\Models\Usuario;
 use Illuminate\Http\Request;
 
 class ReporteController extends Controller
@@ -15,7 +17,10 @@ class ReporteController extends Controller
 
     public function create()
     {
-        return view('auth.reporte.create');
+        $maquina = Maquina::All();
+        $usuario = Usuario::All();
+        
+        return view('auth.reporte.create')->with('maquina',$maquina)->with('usuario',$usuario);
     }
 
     public function store(Request $request)
@@ -31,7 +36,7 @@ class ReporteController extends Controller
         );
 
         $reporte = Reporte::create($datos);
-        return redirect()->route('reporte.index');
+        return view('auth.reporte.creado');    
     }
 
     public function show(Reporte $reporte)
@@ -41,7 +46,9 @@ class ReporteController extends Controller
 
     public function edit(Reporte $reporte)
     {
-        return view('auth.reporte.edit', compact('reporte'));
+        $maquina = Maquina::All();
+        $usuario = Usuario::All();
+        return view('auth.reporte.edit', compact('reporte'))->with('maquina',$maquina)->with('usuario',$usuario);
     }
 
     public function update(Request $request, Reporte $reporte)
@@ -51,8 +58,8 @@ class ReporteController extends Controller
                 'fecha_Reporte' => ' required| max:50',
                 'descripcion' => 'required| max:50',
                 'estado_Reporte' => 'required',
-                'id_Maquina_FK' => 'required',
-                'identificacion_Usuario_FK' => 'required'
+                'id_Maquina_FK',
+                'identificacion_Usuario_FK'
             ]
         );
 
