@@ -25,7 +25,11 @@
 
             <div class="col-sm-6">
                 <label for="fecha_Nac_Geren" class="form-label">Fecha Nacimiento:</label><br>
-                <input type="date" name="fecha_Nac_Geren" class="form-control" id="fecha_Nac_Geren"><br><br>
+                <?php
+                $fm = date("1900-01-01");
+                $fma = date ("2008-12-31");
+                ?>
+                <input type="date" name="fecha_Nac_Geren" class="form-control" id="fecha_Nac_Geren" min="<?= $fm;?>" max="<?= $fma;?>"><br><br>
             </div>
 
             <div class="col-sm-6">
@@ -43,7 +47,7 @@
             <select name="identificacion_Usuario_FK" id="identificacion_Usuario_FK" class="form-select">
                     @foreach ($usuario as $usuario)
                 <option value="{{ $usuario->id }}">
-                    {{ $usuario->user}}
+                    {{ $usuario->name}}
                     @endforeach
             </select>
             </div>

@@ -31,8 +31,14 @@ Route::get('/', function () {
     return view('paginaPrincipal');
 });
 
-Route::get('/login',[LoginController::class,'show'])->name('login.login');
-Route::post('/login',[LoginController::class,'login'])->name('login');
+Route::get('/login',[LoginController::class,'create'])->name('login.login');
+Route::post('/login',[LoginController::class,'store'])->name('login.store');
+Route::get('/logout',[LoginController::class,'destroy'])->name('login.destroy');
+
+Route::get('gerente',[Gerente::class,'index'])->middleware('auth.admin')->name('gerente.indexadmin');
+Route::get('cliente',[Cliente::class,'index'])->middleware('auth.cliente')->name('Cliente.indexcliente');
+Route::get('entrenador',[Entrenador::class,'index'])->middleware('auth.entrenador')->name('entrenador.indexentrenador');
+
 
 Route::get('usuario/registrar', [UsuarioController::class, 'create'])->name('usuario.create');
 Route::get('usuario/index', [UsuarioController::class, 'index'])->name('usuario.index');
@@ -40,10 +46,6 @@ Route::post('usuario/guardar', [UsuarioController::class, 'store'])->name('usuar
 Route::get('usuario/{usuario}/editar', [UsuarioController::class, 'edit'])->name('usuario.edit');
 Route::put('usuario/{usuario}/actualizar', [UsuarioController::class, 'update'])->name('usuario.update');
 Route::delete('usuario/{usuario}/eliminar', [UsuarioController::class, 'destroy'])->name('usuario.destroy');
-
-Route::get('gerente',[Gerente::class,'index'])->name('gerente.indexadmin');
-Route::get('cliente',[Cliente::class,'index'])->name('Cliente.indexcliente1');
-Route::get('entrenador',[Entrenador::class,'index'])->name('entrenador.indexentrenador');
 
 Route::get('mantenimiento/registrar', [MantenimientoController::class, 'create'])->name('mantenimiento.create');
 Route::get('mantenimiento/index', [MantenimientoController::class, 'index'])->name('mantenimiento.index');

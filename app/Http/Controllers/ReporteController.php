@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Reporte;
 use App\Models\Maquina;
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ReporteController extends Controller
@@ -18,7 +18,7 @@ class ReporteController extends Controller
     public function create()
     {
         $maquina = Maquina::All();
-        $usuario = Usuario::All();
+        $usuario = User::All();
         
         return view('auth.reporte.create')->with('maquina',$maquina)->with('usuario',$usuario);
     }
@@ -47,7 +47,7 @@ class ReporteController extends Controller
     public function edit(Reporte $reporte)
     {
         $maquina = Maquina::All();
-        $usuario = Usuario::All();
+        $usuario = User::All();
         return view('auth.reporte.edit', compact('reporte'))->with('maquina',$maquina)->with('usuario',$usuario);
     }
 

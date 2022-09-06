@@ -49,7 +49,10 @@ class RutinaController extends Controller
 
     public function edit(Rutina $rutina)
     {
-        return view('auth.rutina.edit', compact('rutina'));
+        $ejercicio = Ejercicio::All();
+        $entrenador = Entrenador::All();
+        $cliente = Cliente::All();
+        return view('auth.rutina.edit', compact('rutina'))->with('ejercicio',$ejercicio)->with('entrenador',$entrenador)->with('cliente',$cliente);
     }
 
     public function update(Request $request, Rutina $rutina)

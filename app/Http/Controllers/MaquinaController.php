@@ -48,7 +48,9 @@ class MaquinaController extends Controller
 
     public function edit(Maquina $maquina)
     {
-        return view('auth.maquina.edit', compact('maquina'));
+        $mantenimiento = Mantenimiento::All();
+        $gerente = Gerente::All();
+        return view('auth.maquina.edit', compact('maquina'))->with('mantenimiento',$mantenimiento)->with('gerente',$gerente);
     }
 
     public function update(Request $request, Maquina $maquina)

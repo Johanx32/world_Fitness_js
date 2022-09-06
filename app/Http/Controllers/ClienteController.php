@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use App\Models\Cliente;
 use App\Models\ValoracionFisica;
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ClienteController extends Controller
@@ -16,7 +16,7 @@ class ClienteController extends Controller
 
     public function create()
     {
-        $usuario = Usuario::All();
+        $usuario = User::All();
         $valofisica = ValoracionFisica::All();
         return view('auth.cliente.create')->with('usuario', $usuario)->with('valofisica',$valofisica);
     }
@@ -48,7 +48,9 @@ class ClienteController extends Controller
 
     public function edit(Cliente $cliente)
     {
-        return view('auth.cliente.edit', compact('cliente'));
+        $usuario = User::All();
+        $valofisica = ValoracionFisica::All();
+        return view('auth.cliente.edit', compact('cliente'))->with('usuario',$usuario)->with('valofisica',$valofisica);
     }
 
     public function update(Request $request, Cliente $cliente)

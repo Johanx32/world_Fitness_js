@@ -18,4 +18,9 @@ class Gerente extends Model
                             'direccion_Geren',
                             'identificacion_Usuario_FK'];
 
+    public function user()
+    {
+        return $this->hasOne('App\Models\User');
+    } 
+
 }

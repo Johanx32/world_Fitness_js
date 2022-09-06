@@ -10,28 +10,18 @@
     <title>Login Cliente</title>
 </head>
 <body>
-      <div class="login-container">
+      <div class="login-container"> 
           <div class="login-info-container">
             <h1 class="title">Inicia sesion</h1>
-            <div class="social-login">
-                <div class="social-login-element">
-                   <img src="{{ asset('img/entrenador.png') }}">
-                   <a href="entrenador" class="boton">Entrenador</a>
-                </div>
-                <div class="social-login-element">
-                    <img src="{{ asset('img/aerobicos.png') }}">
-                    <a href="cliente" class="boton">Cliente</a>
-                </div>
-                <div class="social-login-element">
-                    <img src="{{ asset('img/aerobicos.png') }}">
-                    <a href="gerente" class="boton">Gerente</a>
-                </div>
-            </div>
             <form class="inputs-container" action="/login" method="POST">
             @csrf
-                <input class="input" type="text" placeholder="Usuario" name="user">
+                <input class="input" type="text" placeholder="Usuario" name="email">
                 <input class="input" type="password" placeholder="Contraseña" name="password">
                 <button class="btn">Iniciar sesion</button>
+
+            @error('message')
+                <p class="border border-red-500 rounded-md bg-red-100 w-full text-red-600 p-2 my-2">*{{ $message }}</p>
+            @enderror
             </form>
           </div>
             <img class="image-container" src="{{ asset('img/pexels-leon-ardho-2468339.jpg') }}">

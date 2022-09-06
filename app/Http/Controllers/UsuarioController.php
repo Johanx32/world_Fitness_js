@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
@@ -10,7 +10,7 @@ class UsuarioController extends Controller
  
     public function index()
     {
-        $usuario = Usuario::get();
+        $usuario = User::get();
         return view('auth.usuario.index', compact('usuario'));
     }
 
@@ -23,30 +23,34 @@ class UsuarioController extends Controller
     {
         $datos = $request->validate(
             [
-                'user' => ' required|max:50',
+                'name' => 'required',
+                'email' => 'required|max:50| email',
+                'role',
                 'password' => 'required|max:60'
             ]
         );
 
-        $usuario = Usuario::create($datos);
+        $usuario = User::create($datos);
         return view('auth.usuario.creado');
     }
 
-    public function show(Usuario $usuario)
+    public function show(User $usuario)
     {
         //
     }
 
-    public function edit(Usuario $usuario)
+    public function edit(User $usuario)
     {
         return view('auth.usuario.edit', compact('usuario'));
     }
 
-    public function update(Request $request, Usuario $usuario)
+    public function update(Request $request, User $usuario)
     {
         $datos = $request->validate(
             [
-                'user' => ' required|max:50',
+                'name' => 'required',
+                'email' => 'required|max:50| email',
+                'role',
                 'password' => 'required|max:60'
             ]
         );
@@ -54,7 +58,7 @@ class UsuarioController extends Controller
             return redirect()->route('usuario.index');
     }
 
-    public function destroy(Usuario $usuario)
+    public function destroy(User $usuario)
     {
         $usuario->delete();
         return redirect()->route('usuario.index');

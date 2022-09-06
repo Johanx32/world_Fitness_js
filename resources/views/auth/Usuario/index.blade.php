@@ -18,7 +18,7 @@
                     Id
                 </th>
                 <th>
-                    Usuario
+                    Email
                 </th>
                 <th>
                     Contraseña
@@ -36,7 +36,7 @@
                     {{ $usuario->id }}
                 </td>
                 <td>
-                    {{ $usuario->user }}
+                    {{ $usuario->email }}
                 </td>
                 <td>
                     {{ $usuario->password }}

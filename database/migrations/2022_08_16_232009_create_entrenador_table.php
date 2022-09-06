@@ -21,10 +21,10 @@ return new class extends Migration
             $table->string('telefono_Entre');
             $table->string('direccion_Entre');
             $table->boolean('estado_Entre');
-            $table->unsignedBigInteger('identificacion_Usuario_FK');
+            $table->unsignedBigInteger('identificacion_Usuario_FK')->unique()->unsigned();
             $table->timestamps();
 
-            $table->foreign('identificacion_Usuario_FK')->references('id')->on('usuario');
+            $table->foreign('identificacion_Usuario_FK')->references('id')->on('users')->onDelete('cascade');
 
         });
     }

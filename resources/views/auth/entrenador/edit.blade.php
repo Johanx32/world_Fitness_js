@@ -41,8 +41,13 @@
             </div>
 
             <div class="col-sm-6">
-                <label for="identificacion_Usuario_FK" class="form-label">Id Usuario</label><br>
-                <input type="text" name="identificacion_Usuario_FK" class="form-control" id="identificacion_Usuario_FK" value="{{ old('identificacion_Usuario_FK', $entrenador->identificacion_Usuario_FK) }}" disabled><br><br>
+            <label for="identificacion_Usuario_FK" class="form-label">Seleccione el usuario que corresponde:</label><br>
+            <select name="identificacion_Usuario_FK" id="identificacion_Usuario_FK" class="form-select" value="{{ old('identificacion_Usuario_FK', $entrenador->identificacion_Usuario_FK) }}" disabled>
+                    @foreach ($usuario as $usuario)
+                <option value="{{ $usuario->id }}">
+                    {{ $usuario->name}}
+                    @endforeach
+            </select>
             </div>
 
             <div class="col-sm-6">

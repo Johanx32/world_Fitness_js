@@ -15,7 +15,11 @@
         <div class="row">
             <div class="col-sm-12">
                 <label for="fecha_Reporte" class="form-label">Fecha Reporte</label><br>
-                <input type="date" name="fecha_Reporte" class="form-control" id="fecha_Reporte"><br>
+                <?php
+                $fm = date("2022-01-01");
+                $fma = date ("2022-12-31");
+                ?>
+                <input type="date" name="fecha_Reporte" class="form-control" id="fecha_Reporte" min="<?= $fm;?>" max="<?= $fma;?>"><br>
             </div>
 
             <div class="col-sm-12">
@@ -38,7 +42,7 @@
             <select name="identificacion_Usuario_FK" id="identificacion_Usuario_FK" class="form-select">
                     @foreach ($usuario as $usuario)
                 <option value="{{ $usuario->id }}">
-                    {{ $usuario->user}}
+                    {{ $usuario->name}}
                     @endforeach
             </select>
             </div>

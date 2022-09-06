@@ -70,10 +70,10 @@
       <div class="profile-content">
       </div>
       <div class="name-job">
-        <div class="profile_name">Santiago duarte</div>
+        <div class="profile_name">{{ auth()->user()->name }}</div>
         <div class="job">Cliente</div>
       </div>
-      <a href="{{ route('login.login') }}"><i class='bx bx-log-out'></i></a>
+      <a href="{{ route('login.destroy') }}"><i class='bx bx-log-out'></i></a>
     </div>
   </li>
 </ul>

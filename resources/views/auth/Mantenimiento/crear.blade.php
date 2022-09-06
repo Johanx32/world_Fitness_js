@@ -13,27 +13,27 @@
         @csrf
         <br>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="tipoMantenimiento" class="form-label">Tipo de Mantenimiento</label><br>
                 <input type="text" name="tipo_Mantenimiento" class="form-control" id="tipoMantenimiento"><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="DiagMantenimiento" class="form-label">Diagnostico del Mantenimiento</label><br>
                 <input type="text" name="diagnostico_Manteni" class="form-control" id="DiagMantenimiento"><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="fechaInicio" class="form-label">Fecha Inicio</label><br>
                 <input type="date" name="fecha_Inicio" class="form-control" id="fechaInicio"><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="fechaFin" class="form-label">Fecha Fin</label><br>
                 <input type="date" name="fecha_Fin" class="form-control" id="fechaFin"><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="estadoMan" class="form-label">Estado</label><br>
                 <select name="estado_Mantenimiento" id="estadoMan" class="form-select">
                     <option value="1">Activo</option>

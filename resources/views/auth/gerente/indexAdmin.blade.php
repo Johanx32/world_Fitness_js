@@ -73,7 +73,7 @@
 
       <li>
         <a href="#">
-          <i class="fa-solid fa-circle-info"></i>
+          <i class="fa-solid fa-circle-user"></i>
           <span class="link_name">Perfil</span>
         </a>
         <ul class="sub-menu blank">
@@ -87,10 +87,10 @@
         <!--<img src="image/profile.jpg" alt="profileImg">-->
       </div>
       <div class="name-job">
-        <div class="profile_name">Johan Fonseca</div>
+        <div class="profile_name">{{ auth()->user()->name }}</div>
         <div class="job">Gerente</div>
       </div>
-      <a href="{{ route('login.login') }}"><i class='bx bx-log-out'></i></a>
+      <a href="{{ route('login.destroy') }}"><i class='bx bx-log-out'></i></a>
     </div>
   </li>
 </ul>

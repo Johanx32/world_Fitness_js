@@ -14,8 +14,13 @@
         <br>
         <div class="row">
             <div class="col-sm-12">
-                <label for="user" class="form-label">Usuario</label><br>
-                <input type="text" name="user" class="form-control" id="user"><br>
+                <label for="name" class="form-label">Nombre</label><br>
+                <input type="text" name="name" class="form-control" id="name"><br>
+            </div>
+
+            <div class="col-sm-12">
+                <label for="email" class="form-label">Email</label><br>
+                <input type="text" name="email" class="form-control" id="email"><br>
             </div>
 
             <div class="col-sm-12">

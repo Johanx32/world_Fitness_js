@@ -3,7 +3,7 @@
 @section('title', "Registrar")
 
 @section('contenido')
-    <h3>Nuevo Mantenimiento</h3>
+    <h3>Nueva Valoracion Fisica</h3>
     <div class="col-sm-12">
                 <a href="{{ route('valoracion_fisica.create') }}" class="btn btn-outline-secondary">Crear valoracion fisica</a>
                 <a href="{{ route('valoracion_fisica.index') }}" class="btn btn-outline-secondary">Listar valoracion fisicas</a>

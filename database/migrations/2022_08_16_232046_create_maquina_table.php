@@ -25,8 +25,8 @@ return new class extends Migration
             $table->unsignedBigInteger('identificacion_Gerente_FK');
             $table->timestamps();
 
-            $table->foreign('id_Mantenimiento_FK')->references('id')->on('mantenimiento');
-            $table->foreign('identificacion_Gerente_FK')->references('id')->on('gerente');
+            $table->foreign('id_Mantenimiento_FK')->references('id')->on('mantenimiento')->onDelete('cascade');
+            $table->foreign('identificacion_Gerente_FK')->references('id')->on('gerente')->onDelete('cascade');
 
         });
     }

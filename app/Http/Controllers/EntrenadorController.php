@@ -3,13 +3,13 @@
 namespace App\Http\Controllers;
 
 use App\Models\Entrenador;
-use App\Models\Usuario;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class EntrenadorController extends Controller
 {
 
-    public function index()
+    public function index() 
     {
         $entrenador = Entrenador::get();
         return view('auth.entrenador.index', compact('entrenador'));
@@ -17,7 +17,7 @@ class EntrenadorController extends Controller
 
     public function create()
     {
-        $usuario = Usuario::All();
+        $usuario = User::All();
         return view('auth.entrenador.create')->with('usuario', $usuario);
     }
 
@@ -46,7 +46,8 @@ class EntrenadorController extends Controller
 
     public function edit(Entrenador $entrenador)
     {
-        return view('auth.entrenador.edit', compact('entrenador'));
+        $usuario = User::All();
+        return view('auth.entrenador.edit', compact('entrenador'))->with('usuario',$usuario);
     }
 
     public function update(Request $request, Entrenador $entrenador)

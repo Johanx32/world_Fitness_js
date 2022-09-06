@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Gerente;
-use App\Models\Usuario;
+use App\Models\User;
 
 class GerenteController extends Controller
 {
@@ -17,7 +17,7 @@ class GerenteController extends Controller
 
     public function create()
     {
-        $usuario = Usuario::All();
+        $usuario = User::All();
         return view('auth.gerente.create')->with('usuario',$usuario);
     }
 
@@ -45,7 +45,7 @@ class GerenteController extends Controller
 
     public function edit(Gerente $gerente)
     {
-        $usuario = Usuario::All();
+        $usuario = User::All();
         return view('auth.gerente.edit', compact('gerente'))->with('usuario',$usuario);
     }
 

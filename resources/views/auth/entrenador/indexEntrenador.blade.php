@@ -31,7 +31,14 @@
 
       <li>
         <a href="{{ route('cliente.index') }}">
-          <i class="fa-solid fa-person-running"></i> 
+          <i class="fa-solid fa-calendar"></i>
+          <span class="link_name">Lista Semanal</span>
+        </a>
+      </li>
+
+      <li>
+        <a href="{{ route('cliente.index') }}">
+        <i class="fa-solid fa-users"></i>
           <span class="link_name">Clientes</span>
         </a>
       </li>
@@ -61,7 +68,7 @@
 
       <li>
         <a href="#">
-          <i class="fa-solid fa-circle-info"></i>
+          <i class="fa-solid fa-circle-user"></i>
           <span class="link_name">Perfil</span>
         </a>
         <ul class="sub-menu blank">
@@ -75,10 +82,10 @@
         <!--<img src="image/profile.jpg" alt="profileImg">-->
       </div>
       <div class="name-job">
-        <div class="profile_name">Fabian Avellaneda</div>
+        <div class="profile_name">{{ auth()->user()->name }}</div>
         <div class="job">Entrenador</div>
       </div>
-      <a href="{{ route('login.login') }}"><i class='bx bx-log-out'></i></a>
+      <a href="{{ route('login.destroy') }}"><i class='bx bx-log-out'></i></a>
     </div>
   </li>
 </ul>

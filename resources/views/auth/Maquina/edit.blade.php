@@ -49,13 +49,23 @@
             </div>
 
             <div class="col-sm-6">
-                <label for="id_Mantenimiento_FK" class="form-label">id Mantenimiento</label><br>
-                <input type="text" name="id_Mantenimiento_FK" class="form-control" id="id_Mantenimiento_FK" value="{{ old('id_Mantenimiento_FK', $maquina->id_Mantenimiento_FK) }}" disabled><br>
+            <label for="id_Mantenimiento_FK" class="form-label">Seleccione el mantenimiento que corresponde:</label><br>
+            <select name="id_Mantenimiento_FK" id="id_Mantenimiento_FK" class="form-select" value="{{ old('id_Mantenimiento_FK', $maquina->id_Mantenimiento_FK) }}" disabled>
+                    @foreach ($mantenimiento as $mantenimiento)
+                <option value="{{ $mantenimiento->id }}">
+                    {{ $mantenimiento->tipo_Mantenimiento}}
+                    @endforeach
+            </select>
             </div>
 
             <div class="col-sm-6">
-                <label for="identificacion_Gerente_FK" class="form-label">Identificacion Gerente</label><br>
-                <input type="text" name="identificacion_Gerente_FK" class="form-control" id="identificacion_Gerente_FK" value="{{ old('identificacion_Gerente_FK', $maquina->identificacion_Gerente_FK) }}" disabled><br>
+            <label for="identificacion_Gerente_FK" class="form-label">Seleccione el gerente que corresponde:</label><br>
+            <select name="identificacion_Gerente_FK" id="identificacion_Gerente_FK" class="form-select" value="{{ old('identificacion_Gerente_FK', $maquina->identificacion_Gerente_FK) }}" disabled>
+                    @foreach ($gerente as $gerente)
+                <option value="{{ $gerente->id }}">
+                    {{ $gerente->nombre_Geren}}
+                    @endforeach
+            </select>
             </div>
 
             <div class="col-sm-12 text-end my-2">

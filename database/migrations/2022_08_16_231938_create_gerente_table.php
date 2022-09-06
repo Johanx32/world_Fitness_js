@@ -20,9 +20,9 @@ return new class extends Migration
             $table->date('fecha_Nac_Geren');
             $table->string('telefono_Geren');
             $table->string('direccion_Geren');
-            $table->unsignedBigInteger('identificacion_Usuario_FK');
+            $table->unsignedBigInteger('identificacion_Usuario_FK')->unique()->unsigned();
             $table->timestamps();
-            $table->foreign('identificacion_Usuario_FK')->references('id')->on('usuario');
+            $table->foreign('identificacion_Usuario_FK')->references('id')->on('users')->onDelete('cascade');
 
         });
     }
