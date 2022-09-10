@@ -59,13 +59,13 @@ class EjercicioController extends Controller
             ]
         );
 
-            $ejercicio->update($datos);
-            return redirect()->route('ejercicio.index');
+        $ejercicio->update($datos);
+        return view('auth.ejercicio.actualizado/*  */');
     }
 
     public function destroy(Ejercicio $ejercicio)
     {
         $ejercicio->delete();
-        return redirect()->route('ejercicio.index');
+        return view('auth.ejercicio.borrado');
     }
 }

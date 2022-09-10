@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class EntrenadorController extends Controller
 {
 
-    public function index() 
+    public function index()
     {
         $entrenador = Entrenador::get();
         return view('auth.entrenador.index', compact('entrenador'));
@@ -47,7 +47,7 @@ class EntrenadorController extends Controller
     public function edit(Entrenador $entrenador)
     {
         $usuario = User::All();
-        return view('auth.entrenador.edit', compact('entrenador'))->with('usuario',$usuario);
+        return view('auth.entrenador.edit', compact('entrenador'))->with('usuario', $usuario);
     }
 
     public function update(Request $request, Entrenador $entrenador)
@@ -64,13 +64,13 @@ class EntrenadorController extends Controller
             ]
         );
 
-            $entrenador->update($datos);
-            return redirect()->route('entrenador.index');
+        $entrenador->update($datos);
+        return view('auth.entrenador.actualizado');
     }
 
     public function destroy(Entrenador $entrenador)
     {
         $entrenador->delete();
-        return redirect()->route('entrenador.index');
+        return view('auth.entrenador.borrado');
     }
 }

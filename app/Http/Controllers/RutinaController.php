@@ -22,7 +22,7 @@ class RutinaController extends Controller
         $entrenador = Entrenador::All();
         $cliente = Cliente::All();
 
-        return view('auth.rutina.create')->with('ejercicio',$ejercicio)->with('entrenador',$entrenador)->with('cliente',$cliente);
+        return view('auth.rutina.create')->with('ejercicio', $ejercicio)->with('entrenador', $entrenador)->with('cliente', $cliente);
     }
 
     public function store(Request $request)
@@ -39,7 +39,7 @@ class RutinaController extends Controller
         );
 
         $rutina = Rutina::create($datos);
-        return view('auth.rutina.creado');    
+        return view('auth.rutina.creado');
     }
 
     public function show(Rutina $rutina)
@@ -52,7 +52,7 @@ class RutinaController extends Controller
         $ejercicio = Ejercicio::All();
         $entrenador = Entrenador::All();
         $cliente = Cliente::All();
-        return view('auth.rutina.edit', compact('rutina'))->with('ejercicio',$ejercicio)->with('entrenador',$entrenador)->with('cliente',$cliente);
+        return view('auth.rutina.edit', compact('rutina'))->with('ejercicio', $ejercicio)->with('entrenador', $entrenador)->with('cliente', $cliente);
     }
 
     public function update(Request $request, Rutina $rutina)
@@ -68,13 +68,13 @@ class RutinaController extends Controller
             ]
         );
 
-            $rutina->update($datos);
-            return redirect()->route('rutina.index');
+        $rutina->update($datos);
+        return view('auth.rutina.actualizado');
     }
 
     public function destroy(Rutina $rutina)
     {
         $rutina->delete();
-        return redirect()->route('rutina.index');
+        return view('auth.rutina.borrado');
     }
 }

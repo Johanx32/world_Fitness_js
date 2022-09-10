@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
 {
- 
+
     public function index()
     {
         $usuario = User::get();
@@ -54,13 +54,13 @@ class UsuarioController extends Controller
                 'password' => 'required|max:60'
             ]
         );
-            $usuario->update($datos);
-            return redirect()->route('usuario.index');
+        $usuario->update($datos);
+        return view('auth.usuario.actualizado');
     }
 
     public function destroy(User $usuario)
     {
         $usuario->delete();
-        return redirect()->route('usuario.index');
+        return view('auth.usuario.borrado');
     }
 }

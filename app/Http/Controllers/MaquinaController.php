@@ -19,7 +19,7 @@ class MaquinaController extends Controller
     {
         $mantenimiento = Mantenimiento::All();
         $gerente = Gerente::All();
-        return view('auth.maquina.create')->with('mantenimiento',$mantenimiento)->with('gerente',$gerente);
+        return view('auth.maquina.create')->with('mantenimiento', $mantenimiento)->with('gerente', $gerente);
     }
 
     public function store(Request $request)
@@ -38,7 +38,7 @@ class MaquinaController extends Controller
         );
 
         $maquina = Maquina::create($datos);
-        return view('auth.maquina.creado');    
+        return view('auth.maquina.creado');
     }
 
     public function show(Maquina $maquina)
@@ -50,7 +50,7 @@ class MaquinaController extends Controller
     {
         $mantenimiento = Mantenimiento::All();
         $gerente = Gerente::All();
-        return view('auth.maquina.edit', compact('maquina'))->with('mantenimiento',$mantenimiento)->with('gerente',$gerente);
+        return view('auth.maquina.edit', compact('maquina'))->with('mantenimiento', $mantenimiento)->with('gerente', $gerente);
     }
 
     public function update(Request $request, Maquina $maquina)
@@ -68,13 +68,13 @@ class MaquinaController extends Controller
             ]
         );
 
-            $maquina->update($datos);
-            return redirect()->route('maquina.index');
+        $maquina->update($datos);
+        return view('auth.maquina.actualizado');
     }
 
     public function destroy(Maquina $maquina)
     {
         $maquina->delete();
-        return redirect()->route('maquina.index');
+        return view('auth.maquina.borrado');
     }
 }

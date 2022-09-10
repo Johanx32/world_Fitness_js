@@ -32,7 +32,7 @@ class MantenimientoController extends Controller
         );
 
         $mantenimiento = Mantenimiento::create($datos);
-        return view('auth.mantenimiento.creado');    
+        return view('auth.mantenimiento.creado');
     }
 
     public function show(Mantenimiento $mantenimiento)
@@ -57,13 +57,13 @@ class MantenimientoController extends Controller
             ]
         );
 
-            $mantenimiento->update($datos);
-            return redirect()->route('mantenimiento.index');
+        $mantenimiento->update($datos);
+        return view('auth.mantenimiento.actualizado');
     }
 
     public function destroy(Mantenimiento $mantenimiento)
     {
         $mantenimiento->delete();
-        return redirect()->route('mantenimiento.index');
+        return view('auth.mantenimiento.borrado');
     }
 }

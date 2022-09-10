@@ -20,10 +20,17 @@ class UsuarioSeeder extends Seeder
     public function run()
     {
         $g = new User();
-        $g->name ="Pedro";
+        $g->name = "Pedro";
         $g->role = "gerente";
-        $g->email ="Pedro@misena.edu.co";
+        $g->email = "Pedro@misena.edu.co";
         $g->password = Hash::make("12345");
         $g->save();
+
+        $g1 = new User();
+        $g1->name = "santiago";
+        $g1->role = "cliente";
+        $g1->email = "santiago@misena.edu.co";
+        $g1->password = Hash::make("12345");
+        $g1->save();
     }
 }

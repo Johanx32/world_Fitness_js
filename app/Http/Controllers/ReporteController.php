@@ -19,8 +19,8 @@ class ReporteController extends Controller
     {
         $maquina = Maquina::All();
         $usuario = User::All();
-        
-        return view('auth.reporte.create')->with('maquina',$maquina)->with('usuario',$usuario);
+
+        return view('auth.reporte.create')->with('maquina', $maquina)->with('usuario', $usuario);
     }
 
     public function store(Request $request)
@@ -36,7 +36,7 @@ class ReporteController extends Controller
         );
 
         $reporte = Reporte::create($datos);
-        return view('auth.reporte.creado');    
+        return view('auth.reporte.creado');
     }
 
     public function show(Reporte $reporte)
@@ -48,7 +48,7 @@ class ReporteController extends Controller
     {
         $maquina = Maquina::All();
         $usuario = User::All();
-        return view('auth.reporte.edit', compact('reporte'))->with('maquina',$maquina)->with('usuario',$usuario);
+        return view('auth.reporte.edit', compact('reporte'))->with('maquina', $maquina)->with('usuario', $usuario);
     }
 
     public function update(Request $request, Reporte $reporte)
@@ -63,13 +63,13 @@ class ReporteController extends Controller
             ]
         );
 
-            $reporte->update($datos);
-            return redirect()->route('reporte.index');
+        $reporte->update($datos);
+        return view('auth.reporte.actualizado');
     }
 
     public function destroy(Reporte $reporte)
     {
         $reporte->delete();
-        return redirect()->route('reporte.index');
+        return view('auth.reporte.borrado');
     }
 }

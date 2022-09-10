@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Models\Cliente;
 use App\Models\ValoracionFisica;
 use App\Models\User;
@@ -18,7 +19,7 @@ class ClienteController extends Controller
     {
         $usuario = User::All();
         $valofisica = ValoracionFisica::All();
-        return view('auth.cliente.create')->with('usuario', $usuario)->with('valofisica',$valofisica);
+        return view('auth.cliente.create')->with('usuario', $usuario)->with('valofisica', $valofisica);
     }
 
     public function store(Request $request)
@@ -37,8 +38,7 @@ class ClienteController extends Controller
         );
 
         $cliente = Cliente::create($datos);
-        return view('auth.cliente.creado');    
-    
+        return view('auth.cliente.creado');
     }
 
     public function show(Cliente $cliente)
@@ -50,7 +50,7 @@ class ClienteController extends Controller
     {
         $usuario = User::All();
         $valofisica = ValoracionFisica::All();
-        return view('auth.cliente.edit', compact('cliente'))->with('usuario',$usuario)->with('valofisica',$valofisica);
+        return view('auth.cliente.edit', compact('cliente'))->with('usuario', $usuario)->with('valofisica', $valofisica);
     }
 
     public function update(Request $request, Cliente $cliente)
@@ -68,13 +68,13 @@ class ClienteController extends Controller
             ]
         );
 
-            $cliente->update($datos);
-            return redirect()->route('cliente.index');
+        $cliente->update($datos);
+        return view('auth.cliente.actualizado');
     }
 
     public function destroy(Cliente $cliente)
     {
         $cliente->delete();
-        return redirect()->route('cliente.index');
+        return view('auth.cliente.borrado');
     }
 }

@@ -9,7 +9,7 @@ use App\Models\User;
 class GerenteController extends Controller
 {
 
-  public function index()
+    public function index()
     {
         $gerente = Gerente::get();
         return view('auth.gerente.index', compact('gerente'));
@@ -18,19 +18,19 @@ class GerenteController extends Controller
     public function create()
     {
         $usuario = User::All();
-        return view('auth.gerente.create')->with('usuario',$usuario);
+        return view('auth.gerente.create')->with('usuario', $usuario);
     }
 
     public function store(Request $request)
     {
         $datos = $request->validate(
             [
-              'nombre_Geren' => ' required| max:50',
-              'apellido_Geren' => 'required| max:50',
-              'fecha_Nac_Geren' => 'required',
-              'telefono_Geren' => 'required',
-              'direccion_Geren' => 'required| max:50',
-              'identificacion_Usuario_FK' => 'required'
+                'nombre_Geren' => ' required| max:50',
+                'apellido_Geren' => 'required| max:50',
+                'fecha_Nac_Geren' => 'required',
+                'telefono_Geren' => 'required',
+                'direccion_Geren' => 'required| max:50',
+                'identificacion_Usuario_FK' => 'required'
             ]
         );
 
@@ -46,7 +46,7 @@ class GerenteController extends Controller
     public function edit(Gerente $gerente)
     {
         $usuario = User::All();
-        return view('auth.gerente.edit', compact('gerente'))->with('usuario',$usuario);
+        return view('auth.gerente.edit', compact('gerente'))->with('usuario', $usuario);
     }
 
     public function update(Request $request, Gerente $gerente)
@@ -62,13 +62,13 @@ class GerenteController extends Controller
             ]
         );
 
-            $gerente->update($datos);
-            return redirect()->route('gerente.index');
+        $gerente->update($datos);
+        return view('auth.gerente.actualizado');
     }
 
     public function destroy(Gerente $gerente)
     {
         $gerente->delete();
-        return redirect()->route('gerente.index');
+        return view('auth.gerente.borrado');
     }
 }

@@ -33,7 +33,7 @@ class ValoracionFisicaController extends Controller
         );
 
         $valoracion_fisica = ValoracionFisica::create($datos);
-        return view('auth.valoracion_fisica.creado');    
+        return view('auth.valoracion_fisica.creado');
     }
 
     public function show(ValoracionFisica $valoracion_fisica)
@@ -60,12 +60,12 @@ class ValoracionFisicaController extends Controller
         );
 
         $valoracion_fisica->update($datos);
-        return redirect()->route('valoracion_fisica.index');
+        return view('auth.valoracion_fisica.actualizado');
     }
 
     public function destroy(ValoracionFisica $valoracion_fisica)
     {
         $valoracion_fisica->delete();
-        return redirect()->route('valoracion_fisica.index');
+        return view('auth.valoracion_fisica.borrado');
     }
 }

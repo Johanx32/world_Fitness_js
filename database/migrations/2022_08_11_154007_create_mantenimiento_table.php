@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('mantenimiento', function (Blueprint $table) {
             $table->id();
             $table->string('tipo_Mantenimiento', 50);
-            $table->string('diagnostico_Manteni', 50);
+            $table->string('diagnostico_Manteni', 100);
             $table->date('fecha_Inicio');
             $table->date('fecha_Fin');
             $table->boolean('estado_Mantenimiento');
