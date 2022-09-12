@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 class UsuarioController extends Controller
@@ -16,7 +17,8 @@ class UsuarioController extends Controller
 
     public function create()
     {
-        return view('auth.usuario.create');
+        $role = Role::All();
+        return view('auth.usuario.create')->with('role',$role);
     }
 
     public function store(Request $request)
@@ -25,7 +27,7 @@ class UsuarioController extends Controller
             [
                 'name' => 'required',
                 'email' => 'required|max:50| email',
-                'role',
+                'id_Role_FK' => 'required',
                 'password' => 'required|max:60'
             ]
         );
@@ -41,7 +43,8 @@ class UsuarioController extends Controller
 
     public function edit(User $usuario)
     {
-        return view('auth.usuario.edit', compact('usuario'));
+        $role = Role::All();
+        return view('auth.usuario.edit', compact('usuario'))->with('role',$role);
     }
 
     public function update(Request $request, User $usuario)
@@ -50,7 +53,7 @@ class UsuarioController extends Controller
             [
                 'name' => 'required',
                 'email' => 'required|max:50| email',
-                'role',
+                'id_Role_FK',
                 'password' => 'required|max:60'
             ]
         );

@@ -13,17 +13,27 @@
         @csrf
         <br>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="name" class="form-label">Nombre</label><br>
                 <input type="text" name="name" class="form-control" id="name"><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="email" class="form-label">Email</label><br>
                 <input type="text" name="email" class="form-control" id="email"><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
+            <label for="id_Role_FK" class="form-label">Seleccione el rol que corresponde:</label><br>
+            <select name="id_Role_FK" id="id_Role_FK" class="form-select">
+                    @foreach ($role as $role)
+                <option value="{{ $role->id }}">
+                    {{ $role->role}}
+                    @endforeach
+            </select>
+            </div>
+
+            <div class="col-sm-6">
                 <label for="Contra" class="form-label">Contraseña</label><br>
                 <input type="text" name="password" class="form-control" id="Contra">
             </div>

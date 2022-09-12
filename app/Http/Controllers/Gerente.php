@@ -9,7 +9,7 @@ class Gerente extends Controller
 
     public function index()
     {
-        return view('auth.gerente.indexAdmin');
+        return view('auth.Rgerente.indexAdmin');
     }
 
     public function create()

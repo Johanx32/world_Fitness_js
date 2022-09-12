@@ -17,7 +17,7 @@ class AdminAuth
     public function handle(Request $request, Closure $next)
     {
         if(auth()->check()){
-            if (auth()->user()->role == 'gerente') {
+            if (auth()->user()->id_Role_FK == 1) {
                 return $next($request);
             }
         }

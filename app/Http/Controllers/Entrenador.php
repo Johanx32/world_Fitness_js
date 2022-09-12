@@ -9,7 +9,7 @@ class Entrenador extends Controller
 
     public function index()
     {
-        return view('auth.Entrenador.indexEntrenador');
+        return view('auth.REntrenador.indexEntrenador');
     }
 
     public function create()

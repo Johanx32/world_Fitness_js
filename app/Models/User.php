@@ -20,7 +20,7 @@ class User extends Authenticatable
     protected $fillable = [
      'name',
      'email',
-     'role',
+     'id_Role_FK',
      'password',    
     ];
 
@@ -29,9 +29,19 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public const Role = ['','Gerente','Cliente','Entrenador'];
+
+    public function id_Role_FK(){
+        return self::Role[$this->id_Role_FK];
+    }
+
+    public function setPasswordAttribute($password){
+        $this->attributes['password'] = bcrypt($password);
+    }
+
     public function gerente()
     {
-        return $this->hasOne('App\Models\Gerente');
+        return $this->hasOne('App\Models\Gerente', 'identificacion_Usuario_FK', 'id');
     }  
 
 }

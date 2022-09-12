@@ -9,7 +9,7 @@ class Cliente extends Controller
 
     public function index()
     {
-        return view('auth.Cliente.indexcliente');
+        return view('auth.RCliente.indexcliente');
     }
 
     public function create()

@@ -17,10 +17,13 @@
                 Id
             </th>
             <th>
+                Nombre
+            </th>
+            <th>
                 Email
             </th>
             <th>
-                Contraseña
+                Role
             </th>
             <th colspan="3">
                 Acciones
@@ -35,10 +38,13 @@
                 {{ $usuario->id }}
             </td>
             <td>
+                {{ $usuario->name }}
+            </td>
+            <td>
                 {{ $usuario->email }}
             </td>
             <td>
-                {{ $usuario->password }}
+                {{ $usuario->id_Role_FK() }}
             </td>
             <td>
                 <button type="button" class="btn btn-danger btn-sm" data-bs-toggle="modal" data-bs-target="#modal-delete-{{ $usuario->id }}">Eliminar</button>
@@ -58,7 +64,7 @@
                 @method('delete')
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="exampleModalLabel">Eliminar Usuario</h5>
                     </div>
                     <div class="modal-body">
                         Deseas eliminar al registro por nombre {{$usuario->name}}

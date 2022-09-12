@@ -21,16 +21,23 @@ class UsuarioSeeder extends Seeder
     {
         $g = new User();
         $g->name = "Pedro";
-        $g->role = "gerente";
-        $g->email = "Pedro@misena.edu.co";
+        $g->id_Role_FK = 1;
+        $g->email = "Pedro@gmail.com";
         $g->password = Hash::make("12345");
         $g->save();
 
         $g1 = new User();
         $g1->name = "santiago";
-        $g1->role = "cliente";
+        $g1->id_Role_FK = 2;
         $g1->email = "santiago@misena.edu.co";
         $g1->password = Hash::make("12345");
         $g1->save();
+
+        $g2 = new User();
+        $g2->name = "Jorge";
+        $g2->id_Role_FK = 3;
+        $g2->email = "jorge@gmail.com";
+        $g2->password = Hash::make("12345");
+        $g2->save();
     }
 }

@@ -15,17 +15,19 @@
         @csrf
         <br>
         <div class="row">
-            <div class="col-sm-12">
 
+            <div class="col-sm-6">
             <label for="name" class="form-label">Nombre</label><br>
                 <input type="text" name="name" class="form-control" id="name" value="{{ old('name', $usuario->name) }}"><br>
             </div>
 
+            <div class="col-sm-6">
                 <label for="email" class="form-label">Email</label><br>
                 <input type="text" name="email" class="form-control" id="email" value="{{ old('email', $usuario->email) }}"><br>
+                <input type="hidden" name="id_Role_FK" class="form-control" id="id_Role_FK" value="{{ old('id_Role_FK', $usuario->id_Role_FK) }}"><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="Contra" class="form-label">Contraseña</label><br>
                 <input type="text" name="password" class="form-control" id="Contra" value="{{ old('password', $usuario->password) }}">
             </div>

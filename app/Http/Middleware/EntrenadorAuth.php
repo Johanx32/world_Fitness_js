@@ -17,7 +17,7 @@ class EntrenadorAuth
     public function handle(Request $request, Closure $next)
     {
         if(auth()->check()){
-            if (auth()->user()->role == 'entrenador') {
+            if (auth()->user()->id_Role_FK == 3) {
                 return $next($request);
             }
         }

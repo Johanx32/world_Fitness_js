@@ -7,7 +7,7 @@
     
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
     
-    <title>Login Cliente</title>
+    <title>Login</title>
 </head>
 <body>
       <div class="login-container"> 

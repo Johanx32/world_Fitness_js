@@ -20,11 +20,11 @@ class LoginController extends Controller
             return back()->withErrors([
                 'message' => 'El usuario o la contraseña son incorrectos, por favor vuelva a intentar',
             ]);
-        } else if (auth()->user()->role == 'gerente') {
+        } else if (auth()->user()->id_Role_FK == 1) {
             return redirect()->to('gerente');
-        } else if (auth()->user()->role == 'entrenador') {
+        } else if (auth()->user()->id_Role_FK == 3) {
             return redirect()->to('entrenador');
-        } else if (auth()->user()->role == 'cliente') {
+        } else if (auth()->user()->id_Role_FK == 2) {
             return redirect()->to('cliente');
         } else {
             return redirect()->to('/login');
