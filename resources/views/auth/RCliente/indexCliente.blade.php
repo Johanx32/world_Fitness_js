@@ -92,45 +92,28 @@
 
       <div class="container__box">
         <div class="box">
-          <i class="lni lni-bookmark"></i>
-          <h5>Ver rutina actual</h5>
-          <h4>Ver rutina</h4>
-        </div>
-        <div class="box">
-          <i class="lni lni-book"></i>
+        <a href="{{ route('rutina.index2') }}"><i class="lni lni-book"></i></a>
           <h5>Ver rutinas</h5>
           <h4>Rutinas</h4>
         </div>
+
         <div class="box">
-          <i class="lni lni-eye"></i>
-          <h5>ver Maquinas</h5>
-          <h4>Maquinas</h4>
-        </div>
-        <div class="box">
-          <a href="{{ view('auth.cliente.reportarMaquina') }}"><i class="lni lni-warning"></i></a>
+        <a href="{{ route('reporte.index2') }}"><i class="lni lni-warning"></i></a>
           <h5>Reportar Maquina</h5>
           <h4>Reportar</h4>
         </div>
         <div class="box">
-          <i class="lni lni-question-circle"></i>
-          <h5>Ver Perfil</h5>
-          <h4>Perfil</h4>
+          <a href="{{ route('maquina.index2') }}"><i class="lni lni-eye"></i></a>
+          <h5>ver Maquinas</h5>
+          <h4>Maquinas</h4>
         </div>
+
         <div class="box">
-          <i class="lni lni-users"></i>
-          <h5>Ver instructores</h5>
-          <h4>Instructores</h4>
+        <i class="fa-solid fa-circle-info"></i>
+          <h5>Ver perfil</h5>
+          <h4>Perfil  </h4>
         </div>
-        <div class="box">
-          <i class="lni lni-camera"></i>
-          <h5>Imagenes</h5>
-          <h4>Imagenes WorldFitnessJS</h4>
-        </div>
-        <div class="box">
-          <i class="lni lni-phone"></i>
-          <h5>Contacto</h5>
-          <h4>Contacto</h4>
-        </div>
+
       </div>
 
     </main>

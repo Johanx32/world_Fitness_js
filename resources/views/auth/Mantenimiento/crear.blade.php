@@ -23,7 +23,7 @@
                 <input type="text" name="diagnostico_Manteni" class="form-control" id="DiagMantenimiento"><br>
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-sm-6">       
                 <label for="fechaInicio" class="form-label">Fecha Inicio</label><br>
                 <input type="date" name="fecha_Inicio" class="form-control" id="fechaInicio"><br>
             </div>

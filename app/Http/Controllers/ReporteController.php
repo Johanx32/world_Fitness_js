@@ -15,6 +15,12 @@ class ReporteController extends Controller
         return view('auth.reporte.index', compact('reporte'));
     }
 
+    public function index2()
+    {
+        $reporte = Reporte::get();
+        return view('auth.RCliente.reporte.index', compact('reporte'));
+    }
+
     public function create()
     {
         $maquina = Maquina::All();
@@ -37,6 +43,30 @@ class ReporteController extends Controller
 
         $reporte = Reporte::create($datos);
         return view('auth.reporte.creado');
+    }
+
+    public function create2()
+    {
+        $maquina = Maquina::All();
+        $usuario = User::All();
+
+        return view('auth.Rcliente.reporte.create')->with('maquina', $maquina)->with('usuario', $usuario);
+    }
+
+    public function store2(Request $request)
+    {
+        $datos = $request->validate(
+            [
+                'fecha_Reporte' => ' required| max:50',
+                'descripcion' => 'required| max:50',
+                'estado_Reporte' => 'required',
+                'id_Maquina_FK' => 'required',
+                'identificacion_Usuario_FK' => 'required'
+            ]
+        );
+
+        $reporte = Reporte::create($datos);
+        return view('auth.RCliente.reporte.creado');
     }
 
     public function show(Reporte $reporte)

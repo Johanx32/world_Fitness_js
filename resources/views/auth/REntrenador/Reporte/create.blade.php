@@ -5,15 +5,15 @@
 @section('contenido')
     <h3>Nuevo Reporte</h3>
     <div class="col-sm-12">
-                <a href="{{ route('reporte.create') }}" class="btn btn-outline-secondary">Crear Reporte</a>
-                <a href="{{ route('reporte.index') }}" class="btn btn-outline-secondary">Listar Reportes</a>
-                <a href="{{ route('gerente.indexadmin') }}"class="btn btn-outline-secondary">Volver</a>
+                <a href="{{ route('reporte.create2') }}" class="btn btn-outline-secondary">Crear Reporte</a>
+                <a href="{{ route('reporte.index2') }}" class="btn btn-outline-secondary">Listar Reportes</a>
+                <a href="{{ route('entrenador.indexentrenador') }}"class="btn btn-outline-secondary">Volver</a>
             </div>
-    <form action="{{ route('reporte.store') }}" method="POST">
+    <form action="{{ route('reporte.store2') }}" method="POST">
         @csrf
         <br>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="fecha_Reporte" class="form-label">Fecha Reporte</label><br>
                 <?php
                 $fm = date("2022-01-01");
@@ -22,7 +22,7 @@
                 <input type="date" name="fecha_Reporte" class="form-control" id="fecha_Reporte" min="<?= $fm;?>" max="<?= $fma;?>"><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="descripcion" class="form-label">Descripcion</label><br>
                 <input type="text" name="descripcion" class="form-control" id="descripcion"><br>
             </div> 
@@ -48,11 +48,10 @@
             </div>
 
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="estado_Reporte" class="form-label">Estado</label><br>
                 <select name="estado_Reporte" id="estado_Reporte" class="form-select">
                     <option value="1">Activo</option>
-                    <option value="0">Inactivo</option>
                 </select>
             </div>
 

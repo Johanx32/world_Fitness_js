@@ -8,29 +8,29 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="{{ asset('css/eliminado.css') }}">
-    <link rel="stylesheet" href="xd.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <title>Mantenimiento actualizado</title>
+    <title>Rutina Eliminada</title>
 </head>
 
 <body>
     <section class="modal">
         <div class="modal-container">
             <img class="modal-img" src="{{ asset('img/eliminado.svg') }}">
-            <h2 class="title">Hola Gerente</h2>
-            <p class="paragraph">El Mantenimiento fue actualizado correctamente, ¿deseas actualizar otro Mantenimiento?</p>
+            <h2 class="title">Hola gerente</h2>
+            <p class="paragraph">La rutina seleccionada acaba de ser eliminada correctamente, ¿deseas eliminar otra rutina?</p>
             <div class="btns">
-                <a href="{{ route('mantenimiento.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('rutina.index3') }}" class="open-view">Si</a>
+                <a href="{{ route('entrenador.indexentrenador') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <script>
         Swal.fire({
-            title: '<strong>Mantenimiento Actualizado</strong>',
+            title: '<strong>Rutina Eliminado</strong>',
             icon: 'success',
             backdrop: true,
             timer: 5000,

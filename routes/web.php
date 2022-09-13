@@ -39,6 +39,7 @@ Route::get('gerente',[Gerente::class,'index'])->middleware('auth.admin')->name('
 Route::get('cliente',[Cliente::class,'index'])->middleware('auth.cliente')->name('Cliente.indexcliente');
 Route::get('entrenador',[Entrenador::class,'index'])->middleware('auth.entrenador')->name('entrenador.indexentrenador');
 
+//Rutas Gerente
 
 Route::get('usuario/registrar', [UsuarioController::class, 'create'])->name('usuario.create');
 Route::get('usuario/index', [UsuarioController::class, 'index'])->name('usuario.index');
@@ -110,3 +111,24 @@ Route::get('rutina/{rutina}/editar', [RutinaController::class, 'edit'])->name('r
 Route::put('rutina/{rutina}/actualizar', [RutinaController::class, 'update'])->name('rutina.update');
 Route::delete('rutina/{rutina}/eliminar', [RutinaController::class, 'destroy'])->name('rutina.destroy');
 
+
+
+//Rutas Cliente
+
+Route::get('rutina/index2', [RutinaController::class, 'index2'])->name('rutina.index2');
+Route::get('maquina/index2', [MaquinaController::class, 'index2'])->name('maquina.index2');
+Route::get('reporte/index2', [ReporteController::class, 'index2'])->name('reporte.index2');
+Route::post('reporte/guardar2', [ReporteController::class, 'store2'])->name('reporte.store2');
+Route::get('reporte/registrar2', [ReporteController::class, 'create2'])->name('reporte.create2');
+
+
+
+//Rutas Entrenador
+
+Route::get('cliente/index2', [ClienteController::class, 'index2'])->name('cliente.index2');
+Route::get('rutina/index3', [RutinaController::class, 'index3'])->name('rutina.index3');
+Route::get('rutina/registrar2', [RutinaController::class, 'create2'])->name('rutina.create2');
+Route::post('rutina/guardar2', [RutinaController::class, 'store2'])->name('rutina.store2');
+Route::get('rutina/{rutina}/editar2', [RutinaController::class, 'edit2'])->name('rutina.edit2');
+Route::put('rutina/{rutina}/actualizar2', [RutinaController::class, 'update2'])->name('rutina.update2');
+Route::delete('rutina/{rutina}/eliminar2', [RutinaController::class, 'destroy2'])->name('rutina.destroy2');

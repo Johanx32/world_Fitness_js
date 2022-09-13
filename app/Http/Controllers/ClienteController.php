@@ -41,6 +41,12 @@ class ClienteController extends Controller
         return view('auth.cliente.creado');
     }
 
+    public function index2()
+    {
+        $cliente = Cliente::get();
+        return view('auth.REntrenador.cliente.index', compact('cliente'));
+    }
+
     public function show(Cliente $cliente)
     {
         //

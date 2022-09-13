@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ asset('css/indexAdmin.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/indexEntre.css') }}">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -18,38 +18,18 @@
     <ul class="nav-links">
 
       <li>
-        <a href="#">
-          <i class='bx bx-grid-alt' ></i>
-          <span class="link_name">Dashboard</span>
-        </a>
-
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Dashboard</a></li>
-        </ul>
-
-      </li>
-
-      <li>
-        <a href="{{ route('cliente.index') }}">
-          <i class="fa-solid fa-calendar"></i>
-          <span class="link_name">Lista Semanal</span>
-        </a>
-      </li>
-
-      <li>
-        <a href="{{ route('cliente.index') }}">
+        <a href="{{ route('cliente.index2') }}">
         <i class="fa-solid fa-users"></i>
           <span class="link_name">Clientes</span>
         </a>
       </li>
       
       <li>
-        <a href="{{ route('rutina.index') }}">
+        <a href="{{ route('rutina.index3') }}">
           <i class="fa-solid fa-person-running"></i>
           <span class="link_name">Rutinas</span>
         </a>
       </li>
-
 
       <li>
         <div class="iocn-link">
@@ -61,8 +41,8 @@
         </div>
         <ul class="sub-menu">
           <li><a class="link_name" href="#">Maquinaria</a></li>
-          <li><a href="{{ route('maquina.index') }}">Maquinas</a></li>
-          <li><a href="{{ route('reporte.index') }}">Reportes</a></li>
+          <li><a href="{{ route('maquina.index2') }}">Maquinas</a></li>
+          <li><a href="{{ route('reporte.index2') }}">Reportes</a></li>
         </ul>
       </li>
 

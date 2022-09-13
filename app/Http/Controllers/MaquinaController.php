@@ -15,6 +15,12 @@ class MaquinaController extends Controller
         return view('auth.maquina.index', compact('maquina'));
     }
 
+    public function index2()
+    {
+        $maquina = Maquina::get();
+        return view('auth.Rcliente.Maquina.index', compact('maquina'));
+    }
+
     public function create()
     {
         $mantenimiento = Mantenimiento::All();
