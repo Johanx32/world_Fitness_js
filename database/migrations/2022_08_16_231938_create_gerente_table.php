@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('direccion_Geren');
             $table->unsignedBigInteger('identificacion_Usuario_FK')->unique()->unsigned();
             $table->timestamps();
+            $table->softDeletes();
+            
             $table->foreign('identificacion_Usuario_FK')->references('id')->on('users')->onDelete('cascade');
 
         });

@@ -36,7 +36,6 @@ class MaquinaController extends Controller
                 'proveedor' => 'required| max:50',
                 'cantidad' => 'required',
                 'lugar_Maquina' => 'required| max:50',
-                'foto_Maquina' => 'required',
                 'id_Mantenimiento_FK' => 'required',
                 'identificacion_Gerente_FK' => 'required',
                 'estado_Maquina' => 'required'
@@ -67,7 +66,6 @@ class MaquinaController extends Controller
                 'proveedor' => 'required| max:50',
                 'cantidad' => 'required',
                 'lugar_Maquina' => 'required| max:50',
-                'foto_Maquina' => 'required',
                 'id_Mantenimiento_FK',
                 'identificacion_Gerente_FK',
                 'estado_Maquina' => 'required'

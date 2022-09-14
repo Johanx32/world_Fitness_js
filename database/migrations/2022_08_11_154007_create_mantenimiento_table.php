@@ -21,6 +21,7 @@ return new class extends Migration
             $table->date('fecha_Fin');
             $table->boolean('estado_Mantenimiento');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

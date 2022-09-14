@@ -19,8 +19,8 @@
       <h2 class="title">Hola gerente</h2>
       <p class="paragraph">El entrenador fue registrado correctamente, ¿deseas registrar otro entrenador?</p>
       <div class="btns">
-        <a href="{{ route('entrenador.index') }}" class="open-view">Si</a>
-        <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+        <a href="{{ route('entrenador.create') }}" class="open-view">Si</a>
+        <a href="{{ route('entrenador.index') }}" class="open-guide">No, volver al index</a>
       </div>
     </div>
   </section>

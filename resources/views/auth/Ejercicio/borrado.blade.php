@@ -20,7 +20,7 @@
             <p class="paragraph">El Ejercicio fue eliminado correctamente, ¿deseas eliminar otro ejercicio?</p>
             <div class="btns">
                 <a href="{{ route('ejercicio.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('ejercicio.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

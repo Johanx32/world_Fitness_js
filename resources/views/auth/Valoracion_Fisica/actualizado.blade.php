@@ -21,7 +21,7 @@
             <p class="paragraph">La Valoracion fue actualizada correctamente, ¿deseas actualizar otra Valoracion?</p>
             <div class="btns">
                 <a href="{{ route('valoracion_fisica.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('valoracion_fisica.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

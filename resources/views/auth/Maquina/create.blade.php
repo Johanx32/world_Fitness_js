@@ -25,17 +25,12 @@
 
             <div class="col-sm-6">
                 <label for="cantidad" class="form-label">Cantidad</label><br>
-                <input type="text" name="cantidad" class="form-control" id="cantidad"><br>
+                <input type="number" name="cantidad" class="form-control" id="cantidad"><br>
             </div>
 
             <div class="col-sm-6">
                 <label for="lugar_Maquina" class="form-label">Lugar Maquina</label><br>
                 <input type="text" name="lugar_Maquina" class="form-control" id="lugar_Maquina"><br>
-            </div>
-
-            <div class="col-sm-6">
-                <label for="foto_Maquina" class="form-label">Foto</label><br>
-                <input type="text" name="foto_Maquina" class="form-control" id="foto_Maquina"><br>
             </div>
 
             <div class="col-sm-6">

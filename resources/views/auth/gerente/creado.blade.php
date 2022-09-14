@@ -17,10 +17,10 @@
     <div class="modal-container">
       <img class="modal-img" src="{{ asset('img/eliminado.svg') }}">
       <h2 class="title">Hola gerente</h2>
-      <p class="paragraph">La Gerente fue registrado correctamente, ¿deseas registrar otro Gerente?</p>
+      <p class="paragraph">El Gerente fue registrado correctamente, ¿deseas registrar otro Gerente?</p>
       <div class="btns">
-        <a href="{{ route('gerente.index') }}" class="open-view">Si</a>
-        <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+        <a href="{{ route('gerente.create') }}" class="open-view">Si</a>
+        <a href="{{ route('gerente.index') }}" class="open-guide">No, volver al index</a>
       </div>
     </div>
   </section>

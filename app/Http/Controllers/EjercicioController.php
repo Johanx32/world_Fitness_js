@@ -60,7 +60,7 @@ class EjercicioController extends Controller
         );
 
         $ejercicio->update($datos);
-        return view('auth.ejercicio.actualizado/*  */');
+        return view('auth.ejercicio.actualizado');
     }
 
     public function destroy(Ejercicio $ejercicio)

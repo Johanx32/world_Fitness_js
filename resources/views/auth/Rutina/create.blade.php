@@ -51,7 +51,6 @@
                     {{ $cliente->nombre_Clie}}
                     @endforeach
             </select>
-            
             </div>
 
             <div class="col-sm-6">

@@ -4,10 +4,12 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class Maquina extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
      //Representa una tabla en especifico
      protected $table = 'maquina';
      protected $fillable = [
@@ -15,7 +17,6 @@ class Maquina extends Model
          'proveedor',
          'cantidad',
          'lugar_Maquina',
-         'foto_Maquina',
          'estado_Maquina',
          'id_Mantenimiento_FK',
          'identificacion_Gerente_FK'

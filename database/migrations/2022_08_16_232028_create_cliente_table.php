@@ -24,7 +24,8 @@ return new class extends Migration
             $table->unsignedBigInteger('identificacion_Usuario_FK')->unique()->unsigned();
             $table->unsignedBigInteger('id_valoracionFisica_FK');
             $table->timestamps();
-
+            $table->softDeletes();
+            
             $table->foreign('id_valoracionFisica_FK')->references('id')->on('valoracion_fisica')->onDelete('cascade');
             $table->foreign('identificacion_Usuario_FK')->references('id')->on('users')->onDelete('cascade');
 

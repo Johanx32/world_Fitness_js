@@ -20,8 +20,8 @@
             <h2 class="title">Hola Gerente</h2>
             <p class="paragraph">El Reporte fue actualizado correctamente, ¿deseas actualizar otro Reporte?</p>
             <div class="btns">
-                <a href="{{ route('reporte.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('reporte.create') }}" class="open-view">Si</a>
+                <a href="{{ route('reporte.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

@@ -4,10 +4,11 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Gerente extends Model
 {
-    use HasFactory;
+    use HasFactory, SoftDeletes;
 
     protected $table = 'gerente';
     protected $fillable = [
@@ -18,9 +19,5 @@ class Gerente extends Model
                             'direccion_Geren',
                             'identificacion_Usuario_FK'];
 
-    public function user()
-    {
-        return $this->belongsTo('App\Models\User','id', 'identificacion_Usuario_FK');
-    } 
 
 }

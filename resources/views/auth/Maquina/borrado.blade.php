@@ -20,7 +20,7 @@
             <p class="paragraph">La maquina fue eliminada correctamente, ¿deseas eliminar otra maquina?</p>
             <div class="btns">
                 <a href="{{ route('maquina.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('maquina.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

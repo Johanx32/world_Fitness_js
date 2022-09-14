@@ -19,8 +19,8 @@
       <h2 class="title">Hola gerente</h2>
       <p class="paragraph">EL mantenimiento fue registrado correctamente, ¿deseas registrar otro mantenimiento?</p>
       <div class="btns">
-        <a href="{{ route('mantenimiento.index') }}" class="open-view">Si</a>
-        <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+        <a href="{{ route('mantenimiento.create') }}" class="open-view">Si</a>
+        <a href="{{ route('mantenimiento.index') }}" class="open-guide">No, volver al index</a>
       </div>
     </div>
   </section>

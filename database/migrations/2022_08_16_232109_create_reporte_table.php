@@ -21,7 +21,8 @@ return new class extends Migration
             $table->unsignedBigInteger('id_Maquina_FK');
             $table->unsignedBigInteger('identificacion_Usuario_FK');
             $table->timestamps();
-
+            $table->softDeletes();
+            
             $table->foreign('id_Maquina_FK')->references('id')->on('maquina')->onDelete('cascade');
             $table->foreign('identificacion_Usuario_FK')->references('id')->on('users')->onDelete('cascade');
         

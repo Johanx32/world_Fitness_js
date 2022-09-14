@@ -13,7 +13,7 @@
         @csrf
         <br>
         <div class="row">
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="fecha_Reporte" class="form-label">Fecha Reporte</label><br>
                 <?php
                 $fm = date("2022-01-01");
@@ -22,7 +22,7 @@
                 <input type="date" name="fecha_Reporte" class="form-control" id="fecha_Reporte" min="<?= $fm;?>" max="<?= $fma;?>"><br>
             </div>
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="descripcion" class="form-label">Descripcion</label><br>
                 <input type="text" name="descripcion" class="form-control" id="descripcion"><br>
             </div> 
@@ -48,7 +48,7 @@
             </div>
 
 
-            <div class="col-sm-12">
+            <div class="col-sm-6">
                 <label for="estado_Reporte" class="form-label">Estado</label><br>
                 <select name="estado_Reporte" id="estado_Reporte" class="form-select">
                     <option value="1">Activo</option>

@@ -23,7 +23,8 @@ return new class extends Migration
             $table->boolean('estado_Entre');
             $table->unsignedBigInteger('identificacion_Usuario_FK')->unique()->unsigned();
             $table->timestamps();
-
+            $table->softDeletes();
+            
             $table->foreign('identificacion_Usuario_FK')->references('id')->on('users')->onDelete('cascade');
 
         });

@@ -19,8 +19,8 @@
       <h2 class="title">Hola gerente</h2>
       <p class="paragraph">La rutina fue registrada correctamente, ¿deseas registrar otro rutina?</p>
       <div class="btns">
-        <a href="{{ route('rutina.index') }}" class="open-view">Si</a>
-        <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+        <a href="{{ route('rutina.create') }}" class="open-view">Si</a>
+        <a href="{{ route('rutina.index') }}" class="open-guide">No, volver al index</a>
       </div>
     </div>
   </section>
@@ -30,7 +30,7 @@
 
   <script>
     Swal.fire({
-      title: '<strong>Rutina Registrado</strong>',
+      title: '<strong>Rutina Registrada</strong>',
       icon: 'success',
       backdrop: true,
       timer: 5000,

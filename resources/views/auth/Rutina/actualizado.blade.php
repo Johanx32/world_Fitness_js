@@ -21,7 +21,7 @@
             <p class="paragraph">La Rutina fue actualizada correctamente, ¿deseas actualizar otra Rutina?</p>
             <div class="btns">
                 <a href="{{ route('rutina.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('rutina.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

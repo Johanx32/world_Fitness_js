@@ -21,7 +21,7 @@
             <p class="paragraph">El Gerente fue actualizado correctamente, ¿deseas actualizar otro Gerente?</p>
             <div class="btns">
                 <a href="{{ route('gerente.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('gerente.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

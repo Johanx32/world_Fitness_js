@@ -19,12 +19,12 @@ return new class extends Migration
             $table->string('proveedor');
             $table->integer('cantidad');
             $table->string('lugar_Maquina');
-            $table->string('foto_Maquina');
             $table->boolean('estado_Maquina');
             $table->unsignedBigInteger('id_Mantenimiento_FK');
             $table->unsignedBigInteger('identificacion_Gerente_FK');
             $table->timestamps();
-
+            $table->softDeletes();
+            
             $table->foreign('id_Mantenimiento_FK')->references('id')->on('mantenimiento')->onDelete('cascade');
             $table->foreign('identificacion_Gerente_FK')->references('id')->on('gerente')->onDelete('cascade');
 

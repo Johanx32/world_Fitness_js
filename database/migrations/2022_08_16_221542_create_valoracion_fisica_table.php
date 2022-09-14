@@ -22,6 +22,7 @@ return new class extends Migration
             $table->date('fecha_Valoracion');
             $table->boolean('estado_Valoracion');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

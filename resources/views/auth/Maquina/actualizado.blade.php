@@ -21,7 +21,7 @@
             <p class="paragraph">La Maquina fue actualizada correctamente, ¿deseas actualizar otra Maquina?</p>
             <div class="btns">
                 <a href="{{ route('maquina.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('maquina.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

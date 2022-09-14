@@ -20,7 +20,7 @@
             <p class="paragraph">EL mantenimiento fue eliminado correctamente, ¿deseas eliminar otro mantenimiento?</p>
             <div class="btns">
                 <a href="{{ route('mantenimiento.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('mantenimiento.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

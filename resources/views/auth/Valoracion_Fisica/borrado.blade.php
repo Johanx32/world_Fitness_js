@@ -20,7 +20,7 @@
             <p class="paragraph">La valoracion fue eliminada correctamente, ¿deseas eliminar otra valoracion?</p>
             <div class="btns">
                 <a href="{{ route('valoracion_fisica.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('valoracion_fisica.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

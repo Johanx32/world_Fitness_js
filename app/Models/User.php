@@ -39,9 +39,4 @@ class User extends Authenticatable
         $this->attributes['password'] = bcrypt($password);
     }
 
-    public function gerente()
-    {
-        return $this->hasOne('App\Models\Gerente', 'identificacion_Usuario_FK', 'id');
-    }  
-
 }

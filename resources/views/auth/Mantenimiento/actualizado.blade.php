@@ -21,7 +21,7 @@
             <p class="paragraph">El Mantenimiento fue actualizado correctamente, ¿deseas actualizar otro Mantenimiento?</p>
             <div class="btns">
                 <a href="{{ route('mantenimiento.index') }}" class="open-view">Si</a>
-                <a href="{{ route('gerente.indexadmin') }}" class="open-guide">No, volver al index</a>
+                <a href="{{ route('mantenimiento.index') }}" class="open-guide">No, volver al index</a>
             </div>
         </div>
     </section>

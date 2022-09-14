@@ -34,7 +34,7 @@
 
             <div class="col-sm-6">
                 <label for="telefono_Geren" class="form-label">Telefono:</label><br>
-                <input type="text" name="telefono_Geren" class="form-control" id="telefono_Geren"><br><br>
+                <input type="number" name="telefono_Geren" class="form-control" id="telefono_Geren"><br><br>
             </div>
            
             <div class="col-sm-6">
