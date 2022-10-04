@@ -22,7 +22,7 @@ return new class extends Migration
             $table->string('ejemplo_Ejercicio');
             $table->boolean('estado_Ejercicio');
             $table->timestamps();
-            $table->softDeletes();
+            $table->softDeletes(); 
         });
     }
 

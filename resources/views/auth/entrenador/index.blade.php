@@ -33,7 +33,7 @@
                 Direccion
             </th>
             <th>
-                Identificacion Usuario
+                Usuario
             </th>
             <th>
                 Estado
@@ -66,7 +66,7 @@
                 {{ $entrenador->direccion_Entre }}
             </td>
             <td>
-                {{ $entrenador->identificacion_Usuario_FK }}
+                {{ $entrenador->usuario->name }}
             </td>
             <td>
                 {{ $entrenador->estado_Entre() }}

@@ -19,5 +19,8 @@ class Gerente extends Model
                             'direccion_Geren',
                             'identificacion_Usuario_FK'];
 
+   public function usuario(){
+        return $this->belongsTo(User::class, 'identificacion_Usuario_FK');
+    }
 
 }

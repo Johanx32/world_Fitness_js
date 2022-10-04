@@ -28,4 +28,8 @@ class Cliente extends Model
     public function estado_Clie(){
         return self::Estado[$this->estado_Clie];
     }
+
+    public function usuario(){
+        return $this->belongsTo(User::class, 'identificacion_Usuario_FK');
+    }
 }

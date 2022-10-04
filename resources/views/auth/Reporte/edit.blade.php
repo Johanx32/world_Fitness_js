@@ -44,7 +44,7 @@
             <select name="identificacion_Usuario_FK" id="identificacion_Usuario_FK" class="form-select" value="{{ old('identificacion_Usuario_FK', $reporte->identificacion_Usuario_FK) }}" disabled>
                     @foreach ($usuario as $usuario)
                 <option value="{{ $usuario->id }}">
-                    {{ $usuario->user}}
+                    {{ $usuario->name}}
                     @endforeach
             </select>
             </div>

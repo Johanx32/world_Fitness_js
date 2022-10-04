@@ -23,6 +23,7 @@ class UsuarioController extends Controller
 
     public function store(Request $request)
     {
+
         $datos = $request->validate(
             [
                 'name' => 'required',

@@ -33,10 +33,10 @@
                 Direccion
             </th>
             <th>
-                Identificacion Usuario
+                Usuario
             </th>
             <th>
-                Id Valoracion Fisica
+                Valoracion Fisica
             </th>
             <th>
                 Estado
@@ -69,7 +69,7 @@
                 {{ $cliente->direccion_Clie }}
             </td>
             <td>
-                {{ $cliente->identificacion_Usuario_FK }}
+                {{ $cliente->usuario->name }}
             </td>
             <td>
                 {{ $cliente->id_valoracionFisica_FK }}

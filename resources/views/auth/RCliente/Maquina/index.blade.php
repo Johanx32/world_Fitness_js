@@ -27,13 +27,11 @@
                 Lugar Maquina
             </th>
             <th>
-                Foto Maquina
+            <th>
+                Mantenimiento
             </th>
             <th>
-                Id Mantenimiento
-            </th>
-            <th>
-                Identificacion Gerente
+                Gerente
             </th>
         </tr>
     </thead>
@@ -60,10 +58,10 @@
                 {{ $maquina->foto_Maquina }}
             </td>
             <td>
-                {{ $maquina->id_Mantenimiento_FK }}
+                {{ $maquina->mantenimiento->tipo_Mantenimiento }}
             </td>
             <td>
-                {{ $maquina->identificacion_Gerente_FK }}
+                {{ $maquina->gerente->nombre_Geren }}
             </td>
         @endforeach
     </tbody>

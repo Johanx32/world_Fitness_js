@@ -28,7 +28,7 @@ class MaquinaController extends Controller
         return view('auth.maquina.create')->with('mantenimiento', $mantenimiento)->with('gerente', $gerente);
     }
 
-    public function store(Request $request)
+    public function store(Request $request) 
     {
         $datos = $request->validate(
             [

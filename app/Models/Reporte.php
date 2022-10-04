@@ -12,6 +12,7 @@ class Reporte extends Model
     use HasFactory, SoftDeletes;
 
     protected $table = 'reporte';
+    
     protected $fillable = [
         'fecha_Reporte',
         'descripcion',
@@ -26,5 +27,13 @@ class Reporte extends Model
 
     public function estado_Reporte(){
         return self::Estado[$this->estado_Reporte];
+    }
+
+    public function maquina(){
+        return $this->belongsTo(Maquina::class, 'id_Maquina_FK');
+    }
+
+    public function usuario(){
+        return $this->belongsTo(User::class, 'identificacion_Usuario_FK');
     }
 }

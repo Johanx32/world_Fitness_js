@@ -29,10 +29,10 @@
                 Lugar Maquina
             </th>
             <th>
-                Id Mantenimiento
+                Mantenimiento
             </th>
             <th>
-                Identificacion Gerente
+                Gerente
             </th>
             <th>
                 Estado
@@ -58,14 +58,14 @@
             <td>
                 {{ $maquina->cantidad }}
             </td>
-            <td>
+            <td> 
                 {{ $maquina->lugar_Maquina }}
             </td>   
             <td>
-                {{ $maquina->id_Mantenimiento_FK }}
+                {{ $maquina->mantenimiento->tipo_Mantenimiento }}
             </td>
             <td>
-                {{ $maquina->identificacion_Gerente_FK }}
+                {{ $maquina->gerente->nombre_Geren }}
             </td>
             <td>
                 {{ $maquina->estado_Maquina() }}

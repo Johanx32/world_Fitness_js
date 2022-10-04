@@ -22,13 +22,13 @@
                 Objetivo
             </th>
             <th>
-                Id Ejercicio
+                Ejercicio
             </th>
             <th>
-                Identificacion Entrenador
+                Entrenador
             </th>
             <th>
-                Identificacion Cliente
+                Cliente
             </th>
             <th>
                 Estado
@@ -52,13 +52,13 @@
                 {{ $rutina->objetivo }}
             </td>
             <td>
-                {{ $rutina->id_Ejercicio_FK }}
+                {{ $rutina->ejercicio->nombre_Ejercicio }}
             </td>
             <td>
-                {{ $rutina->identificacion_Entrenador_FK }}
+                {{ $rutina->entrenador->nombre_Entre }}
             </td>
             <td>
-                {{ $rutina->identificacion_Cliente_FK }}
+                {{ $rutina->cliente->nombre_Clie }}
             </td>
             <td>
                 {{ $rutina->estado_Rutina() }}

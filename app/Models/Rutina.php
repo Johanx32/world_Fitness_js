@@ -27,4 +27,17 @@ class Rutina extends Model
    public function estado_Rutina(){
        return self::Estado[$this->estado_Rutina];
    }
+
+   public function ejercicio(){
+     return $this->belongsTo(Ejercicio::class, 'id_Ejercicio_FK');
+    }
+
+    
+    public function entrenador(){
+        return $this->belongsTo(Entrenador::class, 'identificacion_Entrenador_FK');
+    }
+
+    public function cliente(){
+        return $this->belongsTo(Cliente::class, 'identificacion_Cliente_FK');
+    }
 }

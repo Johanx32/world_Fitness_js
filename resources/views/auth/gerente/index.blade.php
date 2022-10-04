@@ -32,7 +32,7 @@
                 Direccion
             </th>
             <th>
-                Identificacion Usuario
+                Usuario
             </th>
             <th colspan="3">
                 Acciones
@@ -62,7 +62,7 @@
                 {{ $gerente->direccion_Geren }}
             </td>
             <td>
-                {{ $gerente->identificacion_Usuario_FK }}
+                {{ $gerente->usuario->name }}
             </td>
             <td>
                 <form action="{{ route('gerente.destroy', $gerente) }}" method="post">

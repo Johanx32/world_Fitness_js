@@ -23,6 +23,10 @@ class Ejercicio extends Model
 
     protected $timestamp = false;
 
+    public function rutina(){
+        $this->belongsTo(Rutina::class);
+    }
+
     public const Estado = ['Inactivo','Activo'];
 
     public function estado_Ejercicio(){

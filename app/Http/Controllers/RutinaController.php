@@ -12,6 +12,7 @@ class RutinaController extends Controller
 {
     public function index()
     {
+
         $rutina = Rutina::get();
         return view('auth.rutina.index', compact('rutina'));
     }

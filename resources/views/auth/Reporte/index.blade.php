@@ -50,10 +50,10 @@
                 {{ $reporte->descripcion }}
             </td>
             <td>
-                {{ $reporte->id_Maquina_FK }}
+                {{ $reporte->maquina->nombre_Maquina }}
             </td>
             <td>
-                {{ $reporte->identificacion_Usuario_FK }}
+                {{ $reporte->usuario->name }}
             </td>
             <td>
                 {{ $reporte->estado_Reporte() }}

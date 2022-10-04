@@ -29,4 +29,8 @@ class Entrenador extends Model
     public function estado_Entre(){
         return self::Estado[$this->estado_Entre];
     }
+
+    public function usuario(){
+        return $this->belongsTo(User::class, 'identificacion_Usuario_FK');
+    }
 }

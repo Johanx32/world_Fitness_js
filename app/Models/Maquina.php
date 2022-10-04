@@ -29,4 +29,12 @@ class Maquina extends Model
      public function estado_Maquina(){
          return self::Estado[$this->estado_Maquina];
      }
+
+     public function mantenimiento(){
+        return $this->belongsTo(Mantenimiento::class, 'id_Mantenimiento_FK');
+    }
+
+    public function gerente(){
+        return $this->belongsTo(Gerente::class, 'identificacion_Gerente_FK');
+    }
 }

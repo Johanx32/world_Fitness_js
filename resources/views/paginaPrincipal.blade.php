@@ -1,178 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <title>Pagina Principal</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../CSS/paginaPrincipal.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <title>GYMCORE</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,700,900" rel="stylesheet">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/owl.carousel.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/owl.theme.default.min.css') }}">
+
+  <link rel="stylesheet" href="{{ asset('css/jquery.fancybox.min.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/bootstrap-datepicker.css') }}">
+  <link rel="stylesheet" href="{{ asset('fonts/flaticon/font/flaticon.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/aos.css') }}">
+  <link href="{{ asset('css/jquery.mb.YTPlayer.min.css') }}" media="all" rel="stylesheet" type="text/css">
+
+  <link rel="stylesheet" href="{{ asset('css/style2.css') }}">
+
 
 
 </head>
-<body>
-    <header id="inicio">
-        <nav class="nav">
-            <div class="logo">
-                <img src="img/logo2.jpg" alt="">
-            </div>
-             <ul class="menu">
-                  <li><a class="a-menu" href="#inicio">inicio</a></li>
-                  <li><a class="a-menu" href="#informacion">informacion</a></li>
-                  <li><a class="a-menu" href="#container-galery">galeria</a></li>
-                  <li><a class="a-menu" href="#servicios">Reseñas</a></li>
-                  <li><a class="a-menu a-menu-ultimo" href="#contacto">contacto</a></li>
-             </ul>
-        </nav>
-        <div class="titulo">
-            <h1>INICIA SESION ADENTRANDOTE EN TU ESFUERZO</h1>
-            <a href="/login" class="boton">Iniciar sesion</a>
+
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+
+  <div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
         </div>
-</header>
-<div class="scrol">
-
-</div>
-
-
-
-<section id="tarjetas">
-        <div class="contenedor">
-            <div class="contenedor-tarjetas" id="informacion">
-                <div class="tarjeta">
-                    <img src="../img/icon.png" class="imagen-tarjeta">
-                    <h3 class="tarjeta-titulo">Clases grupales</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit natus aspernatur esse amet eligendi </p>
-                    <a href="#">Ver mas</a>
-                </div>
-
-                <div class="tarjeta segunda-tarjeta">
-                <img src="../img/icon2.png" class="imagen-tarjeta">
-                    <h3 class="tarjeta-titulo">Entrenamientos de fuerza</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit natus aspernatur esse amet eligendi </p>
-                    <a href="#">Ver mas</a>
-                </div>
-
-                <div class="tarjeta">
-                    <img src="../img/icon3.png" class="imagen-tarjeta">
-                    <h3 class="tarjeta-titulo">Gana musculo</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit natus aspernatur esse amet eligendi </p>
-                    <a href="#">Ver mas</a>
-                </div>
-            </div>
-
-        </div>
-</section>
-
-<section class="about">
-    <div class="about-container">
-    <img src="../img/entrenador.jpg" class="imagen-tarjeta" data-aos="slide-right" data-aos-once="true" data-aos-duration="1000">
-        <div class="about-contenido">
-         <h1 data-aos="slide-left" data-aos-once="true" data-aos-duration="1000">entrenador personalizado</h1>
-         <h5 data-aos="slide-left" data-aos-once="true" data-aos-duration="1000">el mejor <span>entrenador<span></h5>
-         <p data-aos="slide-left" data-aos-once="true" data-aos-duration="1000">Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta odio earum nobis dolore amet illum quo delectus? Illum eos neque ratione veritatis tem</p>
-        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
     </div>
-</section>
 
-<div class="container-videos" id="container-galery">
-    <div class="contenido-videos">
-    <video src="{{ asset('img/video.mp4') }}" height="550px" class="video1" autoplay muted data-aos="slide-right" data-aos-once="true" data-aos-duration="1000"></video>
-    <video src="../img/video2.mp4" class="video2" autoplay muted data-aos="slide-up" data-aos-once="true" data-aos-duration="1000"></video>
-    <video src="../img/video3.mp4" class="video3" height="550px" autoplay muted data-aos="slide-left" data-aos-once="true" data-aos-duration="1000"></video>
+
+    <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container-fluid">
+        <div class="d-flex align-items-center">
+          <div class="site-logo"><img src="{{ asset ('img/lOGO-GYMCORE.png') }}" alt=""></div>
+          <div class="ml-auto">
+            <nav class="site-navigation position-relative text-right" role="navigation">
+              <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li><a href="#home-section" class="nav-link">Inicio</a></li>
+                <li><a href="#section-heading" class="nav-link">Cuidados</a></li>
+                <li><a href="#classes-section" class="nav-link">Clases</a></li>
+                <li><a href="#schedule-section" class="nav-link">Rutinas</a></li>
+                <li><a href="#trainer-section" class="nav-link">Comentarios</a></li>
+                <li><a href="#footer-section" class="nav-link">Contacto</a></li>
+              </ul>
+            </nav>
+            <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a>
+          </div>
+
+        </div>
+      </div>
+
+    </header>
+
+    <a id="bgndVideo" class="player"
+      data-property="{videoURL:'https://www.youtube.com/watch?v=w-cRWOjlk8c',showYTLogo:false, showAnnotations: false, showControls: false, cc_load_policy: false, containment:'#home-section',autoPlay:true, mute:true, startAt:255, stopAt: 271, opacity:1}">
+    </a>
+
+    <div class="intro-section" id="home-section" style="background-color: #ccc;">
+      <div class="container">
+
+        <div class="row align-items-center">
+          <div class="col-lg-12 mx-auto text-center" data-aos="fade-up">
+            <h1 class="mb-3">Conoce lo que necesitas</h1>
+            <p class="lead mx-auto desc mb-5">Control, Gestion de Rutinas y Maquinas</p>
+            <p class="text-center">
+              <a href="/login" class="btn btn-outline-white py-3 px-5">Inicia Sesión</a>
+            </p>
+          </div>
+        </div>
+
+      </div>
     </div>
-</div>
 
-<section class="section-testimonials">
-    <div class="capa" id="servicios"></div>
-    <h1 class="section-h1" data-aos="slide-right" data-aos-once="true" data-aos-duration="1000">Cambios reales</h1>
-    <p class="section-parrafo" data-aos="slide-right" data-aos-once="true" data-aos-duration="1000">Lorem ipsum dolor sit, ametatur magnam corrupti aliquam in magni! Neque voluptate, quidem suscipit nesciunt quo quam accusamus ad nobis minima.</p>
+
+    <div class="site-section" id="section-heading">
+      <div class="container">
+
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-8 section-heading">
+            <h2 class="heading mb-3">Funcion</h2>
+            <p>Este software esta enfocado en apoyar en la parte logistica del gimnasio cumpliendo con los modulos de rutinas del entrenador y tambien con el de reportes hacia las maquinas</p>
+          </div>
+        </div>
+
+        <!-- Slider -->
+        <div class="owl-carousel nonloop-block-14 block-14" data-aos="fade">
+          <div class="slide">
+            <div class="ftco-feature-1">
+              <span class="icon flaticon-fit"></span>
+              <div class="ftco-feature-1-text">
+                <h2>Se Fit</h2>
+                <p>¿Quieres mas motivos? solo entrena</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="ftco-feature-1">
+              <span class="icon flaticon-gym-1"></span>
+              <div class="ftco-feature-1-text">
+                <h2>Realiza ejercicio</h2>
+                <p>el ejercicio regular te ayuda a prevenir el exceso de peso, tener un vientre más plano o incluso puede ayudarte a mantener la pérdida de peso. Considera el hecho de que cuando realizas una actividad física, quemas calorías.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="ftco-feature-1">
+              <span class="icon flaticon-gym"></span>
+              <div class="ftco-feature-1-text">
+                <h2>Gimnasio</h2>
+                <p>Desconectar del ajetreado día a día es muy importante para combatir el estrés, e ir al gimnasio es una buena estrategia para conseguirlo. Te ayudará al relajamiento tanto mental como físico, en definitiva, te hará sentir mejor.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="ftco-feature-1">
+              <span class="icon flaticon-vegetables"></span>
+              <div class="ftco-feature-1-text">
+                <h2>Come vegetales y frutas</h2>
+                <p>Todos sabemos las bondades de las frutas y vegetales y lo saludables que son. Estos alimentos proporcionan un sin número de vitaminas y minerales, además de fibra que es ideal para mantener una digestión normal.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="slide">
+            <div class="ftco-feature-1">
+              <span class="icon flaticon-fruit-juice"></span>
+              <div class="ftco-feature-1-text">
+                <h2>Jugos de frutas</h2>
+                <p>Los jugos de frutas son los mejores ayudantes en infinidades de problemas, son bebidas saludables que nos pueden ayudar en nuestro organismo.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="slide">
+            <div class="ftco-feature-1">
+              <span class="icon flaticon-stationary-bike"></span>
+              <div class="ftco-feature-1-text">
+                <h2>Realiza cardio</h2>
+                <p>El cardio ayuda a quemar muchas calorías, acelera nuestro metabolismo y mejora nuestro Índice de Masa Corporal. Realizar ejercicios cardio de forma regular nos ayudará a mantener nuestro peso ideal. Ayuda a controlar la presión arterial y fortalece el sistema inmunológico</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="bgimg" style="background-image: url('../img/bg_2.jpg');"  data-stellar-background-ratio="0.5">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-7">
+            <h2 class="">Obtenga el resultado que desea</h2>
+            <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur, laudantium quia blanditiis ipsum. <a href="/login">Inicia Sesión</a></p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="site-section" id="classes-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-8  section-heading">
+            <h2 class="heading mb-3">Clases</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.
+            Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{ asset('img/img_1.jpg') }}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #1</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{asset('img/img_2.jpg')}}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #2</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{ asset('img/img_3.jpg') }}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #3</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+            
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{asset('img/img_4.jpg') }}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #4</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{asset('img/img_1.jpg')}}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #5</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+            
+           
+          </div>
+          <div class="col-lg-6">
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{asset('img/img_1.jpg')}}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #1</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+            
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{asset('img/img_2.jpg')}}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #2</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+            
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{asset('img/img_3.jpg')}}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #3</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+            
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{asset('img/img_4.jpg')}}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #4</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+            
+            <div class="class-item d-flex align-items-center">
+              <a href="single.html" class="class-item-thumbnail">
+                <img src="{{asset('img/img_1.jpg')}}" alt="Image">
+              </a>
+              <div class="class-item-text">
+                
+                <h2><a href="single.html">Fitness Class Name #5</a></h2>
+                <span>By Justin Daniel</span>,
+                <span>30 minutes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bgimg" style="background-image: url('img/bg_3.jpg');"  data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-7">
+            <h2 class="">Every Step Counts</h2>
+            <p class="lead mx-auto desc mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore ad, reprehenderit enim!
+               <a href="/login">Inicia Sesión</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section" id="schedule-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5">
+          <div class="col-md-8  section-heading">
+            <h2 class="heading mb-3">Rutinas</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+              texts.
+              Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
+        </div>
+
+    <div class="bgimg" style="background-image: url('img/bg_1.jpg');" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row align-items-center justify-content-center text-center">
+          <div class="col-md-7">
+            <h2 class="">Revisa tus rutinas</h2>
+            <p class="lead mx-auto desc mb-5">Usuarioio inicia sesion y revisa tus rutinas actuales y antiguas con los ejercicios destinados a el musculo a entrenar solo <a href="#" target="_blank">Inicia Sesion</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
     
-    <div class="container-testimonials">
-
-        <div class="testimonial" data-aos="slide-left" data-aos-once="true" data-aos-duration="1000">
-            <div class="foto-testimonial">
-                <img src="../img/client.png">
-            </div>
-            <h2>Santiago duarte</h2>
-            <h4>Cliente world fitness JS</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quaerat deleniti corporis fuga quis quae nobis id rerum, quas quide</p>
+    <div class="site-section" id="trainer-section">
+      <div class="container">
+        <div class="row justify-content-center text-center mb-5" data-aos="fade-up">
+          <div class="col-md-8  section-heading">
+            <h2 class="heading mb-3">Comentarios</h2>
+            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+              texts.
+              Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
+          </div>
         </div>
 
-        <div class="testimonial" data-aos="slide-left" data-aos-once="true" data-aos-duration="1000">
-            <div class="foto-testimonial">
-                 <img src="../img/client.png">
+        <div class="row">
+          <div class="col-lg-3 mb-4 mb-lg-0 col-md-6 text-center" data-aos="fade-up" data-aos-delay="">
+            <div class="person">
+              <img src="img/person_1.jpg" alt="Image" class="img-fluid">
+              <h3>Justin Daniel</h3>
+              <p class="position">Trainer</p>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+              texts.</p>
             </div>
-            <h2>Santiago duarte</h2>
-            <h4>Cliente world fitness JS</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quaerat deleniti corporis fuga quis quae nobis id rerum, quas quide</p>
-        </div>
-
-        <div class="testimonial" data-aos="slide-left" data-aos-once="true" data-aos-duration="1000">
-            <div class="foto-testimonial">
-                 <img src="../img/client.png">
+          </div>
+          <div class="col-lg-3 mb-4 mb-lg-0 col-md-6 text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="person">
+              <img src="img/person_3.jpg" alt="Image" class="img-fluid">
+              <h3>Matthew Davidson</h3>
+              <p class="position">Trainer</p>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                texts.</p>
             </div>
-            <h2>Santiago duarte</h2>
-            <h4>Cliente world fitness JS</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat quaerat deleniti corporis fuga quis quae nobis id rerum, quas quide</p>
+          </div>
+          <div class="col-lg-3 mb-4 mb-lg-0 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="person">
+              <img src="img/person_2.jpg" alt="Image" class="img-fluid">
+              <h3>Matthew Davidson</h3>
+              <p class="position">Trainer</p>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                texts.</p>
+            </div>
+          </div>
+          <div class="col-lg-3 mb-4 mb-lg-0 col-md-6 text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="person">
+              <img src="img/person_4.jpg" alt="Image" class="img-fluid">
+              <h3>Matthew Davidson</h3>
+              <p class="position">Trainer</p>
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind
+                texts.</p>
+            </div>
+          </div>
+        
         </div>
-
+      </div>
     </div>
 
-</section>
 
-<footer class="footer-area">
-    <div class="footer-wave-box">
-        <div class="footer-wave footer-animation"></div>
-    </div>
-    <div class="main" id="contacto">
-        <div class="footer">
-            <div class="single-footer">
-                <h4>Acerca de nosotros</h4>
-                <p>Lorem ipsum dolor sit amet, di dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam. Excepteur sint qui officia deserunt Excepteur.</p>
-                <div class="footer-social">
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-tiktok"></i></a>
-                </div>
+    <footer class="footer-section" id="footer-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <h3 class="text-dark">Sobre GYMCORE</h3>
+            <p>Software enfocado en el manejo de rutinas y el control de las maquinas</p>
+            <div class="footer-social">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href="">Twitter<i class="fab fa-twitter"></i></a>
+                    <a href="">Instagram<i class="fab fa-instagram"></i></a>
+                    <a href="">TikTok<i class="fab fa-tiktok"></i></a>
+                
             </div>
-            <div class="single-footer">
-                <h4>Menu</h4>
-                <ul>
-                    <li><a href=""><i class="fas fa-chevron-right"></i>Informacion</a></li>
-                    <li><a href=""><i class="fas fa-chevron-right"></i>Galeria</a></li>
-                    <li><a href=""><i class="fas fa-chevron-right"></i>Servicios</a></li>
-                    <li><a href=""><i class="fas fa-chevron-right"></i>Contacto</a></li>
-                </ul>
-            </div>
-            <div class="single-footer">
-                <h4>links</h4>
-                <ul>
-                    <li><a href=""><i class="fas fa-chevron-right"></i> manual de privacidad</a></li>
-                    <li><a href=""><i class="fas fa-chevron-right"></i> terminos & condiciones</a></li>
-                </ul>
-            </div>
-            <div class="single-footer">
-                <h4>contact us</h4>
-                <ul>
-                    <li><a href=""><i class="fas fa-map-marker-alt"></i> Suba, lisboa</a></li>
-                    <li><a href=""><i class="fas fa-mobile-alt"></i> +88 0123 456 789</a></li>
-                    <li><a href=""><i class="far fa-envelope"></i> info@demo.com</a></li>
-                    <li><a href=""><i class="fas fa-globe-europe"></i> www.demo.com</a></li>
-                </ul>
-            </div>
+          </div>
+         
+
+          <div class="col-md-3 ml-auto">
+            <h3 class="text-dark">Links</h3>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#">Inicio</a></li>
+              <li><a href="#">Cuidados</a></li>
+              <li><a href="#">Clases</a></li>
+              <li><a href="#">Rutinas</a></li>
+              <li><a href="#">Trainer</a></li>
+              <li><a href="#">Trainer</a></li>
+
+            </ul>
+          </div>
+
         </div>
-        <div class="copy">
-            <p>&copy; 2020 derechos reservados world fitness JS</p>
+
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class=" pt-5">
+              <p class="copyright">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> GYMCORE
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            </div>
+          </div>
+
         </div>
-    </div>
-</footer>
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
-    AOS.init();
-  </script>
-<script src="../js/menu.js"></script>
+      </div>
+    </footer>
+
+  </div>
+  <!-- .site-wrap -->
+
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.countdown.min.js"></script>
+  <script src="js/bootstrap-datepicker.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/jquery.mb.YTPlayer.min.js"></script>
+
+
+  <script src="js/main.js"></script>
+
 </body>
+
 </html>
