@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class Gerente extends Controller
@@ -9,7 +10,8 @@ class Gerente extends Controller
 
     public function index()
     {
-        return view('auth.Rgerente.indexAdmin');
+        $usuario = User::get();
+        return view('auth.RGerente.indexAdmin', compact('usuario'));
     }
 
     public function create()
